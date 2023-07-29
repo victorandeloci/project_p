@@ -7,11 +7,31 @@
 
 @import '../plugins/css/normalize';
 
+@font-face {
+  font-family: AksiMosi;
+  src: url(assets/fonts/AksiMosi.otf);
+}
+
+@font-face {
+  font-family: Another;
+  src: url(assets/fonts/Another.otf);
+}
+
 * {
   box-sizing: border-box;
 }
 
 :root {}
+
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+}
 
 html {
   scroll-behavior: smooth;
@@ -20,10 +40,30 @@ html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    color: #eee;
+    text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+    animation-duration: 0.01s;
+    animation-name: textflicker;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    .container {
+      width: 60%;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .row {
+      display: flex;
+
+      .column {
+        width: 100%;
+      }
+    }
 
     main {
       &#home {
-        min-height: 100vh;
+        height: 100vh;
         background-size: cover;
         background-position: center;
         position: relative;
@@ -35,7 +75,61 @@ html {
           top: 0;
           left: 0;
           background: rgba(0, 0, 0, 0.5);
-          backdrop-filter: blur(10px);
+          backdrop-filter: blur(1rem);
+          z-index: 1;
+        }
+      }
+
+      section {
+        &#banner {
+          position: relative;
+          z-index: 2;
+          height: 100%;
+
+          .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 0;
+            height: 100%;
+
+            .cover {
+              width: 20rem;
+              height: 20rem;
+              background-position: center;
+              background-size: cover;
+              box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+              display: grid;
+              place-items: center;
+              position: relative;
+
+              h1 {
+                font-family: AksiMosi;
+                font-size: 500%;
+                color: #fff;
+                margin: 0;
+                text-align: center;
+                position: relative;
+
+                span {
+                  position: absolute;
+                  font-size: 25%;
+                  left: 20%;
+                  top: -5%;
+                }
+              }
+
+              p {
+                font-family: Another;
+                text-transform: uppercase;
+                position: absolute;
+                margin: 0;
+                right: 5rem;
+                font-size: 130%;
+                bottom: 6.5rem;
+              }
+            }
+          }
         }
       }
     }
