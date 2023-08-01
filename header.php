@@ -11,7 +11,7 @@
 
     <script src="<?= get_template_directory_uri() ?>/main.min.js?v=1.0.0" charset="utf-8" defer></script>
   </head>
-  <body>
+  <body style="background-image: url(<?= get_template_directory_uri() ?>/assets/img/wall_4.jpeg);">
     <header>
       <?php get_template_part('elements/nav'); ?>
     </header>

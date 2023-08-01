@@ -353,6 +353,11 @@ template {
   src: url(assets/fonts/Another.otf);
 }
 
+@font-face {
+  font-family: Dosis;
+  src: url(assets/fonts/Dosis-VariableFont_wght.ttf);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -366,8 +371,170 @@ template {
   }
 }
 
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+  5% {
+    opacity: 0.34769;
+  }
+  10% {
+    opacity: 0.23604;
+  }
+  15% {
+    opacity: 0.90626;
+  }
+  20% {
+    opacity: 0.18128;
+  }
+  25% {
+    opacity: 0.83891;
+  }
+  30% {
+    opacity: 0.65583;
+  }
+  35% {
+    opacity: 0.67807;
+  }
+  40% {
+    opacity: 0.26559;
+  }
+  45% {
+    opacity: 0.84693;
+  }
+  50% {
+    opacity: 0.96019;
+  }
+  55% {
+    opacity: 0.08594;
+  }
+  60% {
+    opacity: 0.20313;
+  }
+  65% {
+    opacity: 0.71988;
+  }
+  70% {
+    opacity: 0.53455;
+  }
+  75% {
+    opacity: 0.37288;
+  }
+  80% {
+    opacity: 0.71428;
+  }
+  85% {
+    opacity: 0.70419;
+  }
+  90% {
+    opacity: 0.7003;
+  }
+  95% {
+    opacity: 0.36108;
+  }
+  100% {
+    opacity: 0.24387;
+  }
+}
+
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.43899px 0 1px rgba(0, 30, 255, 0.5), -0.43899px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  5% {
+    text-shadow: 2.7929px 0 1px rgba(0, 30, 255, 0.5), -2.7929px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  10% {
+    text-shadow: 0.02956px 0 1px rgba(0, 30, 255, 0.5), -0.02956px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  15% {
+    text-shadow: 0.40219px 0 1px rgba(0, 30, 255, 0.5), -0.40219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  20% {
+    text-shadow: 3.4794px 0 1px rgba(0, 30, 255, 0.5), -3.4794px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  25% {
+    text-shadow: 1.61256px 0 1px rgba(0, 30, 255, 0.5), -1.61256px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  30% {
+    text-shadow: 0.70156px 0 1px rgba(0, 30, 255, 0.5), -0.70156px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  35% {
+    text-shadow: 3.89691px 0 1px rgba(0, 30, 255, 0.5), -3.89691px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  40% {
+    text-shadow: 3.87091px 0 1px rgba(0, 30, 255, 0.5), -3.87091px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  45% {
+    text-shadow: 2.23106px 0 1px rgba(0, 30, 255, 0.5), -2.23106px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  50% {
+    text-shadow: 0.08084px 0 1px rgba(0, 30, 255, 0.5), -0.08084px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  55% {
+    text-shadow: 2.37585px 0 1px rgba(0, 30, 255, 0.5), -2.37585px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  60% {
+    text-shadow: 2.20219px 0 1px rgba(0, 30, 255, 0.5), -2.20219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  65% {
+    text-shadow: 2.86388px 0 1px rgba(0, 30, 255, 0.5), -2.86388px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  70% {
+    text-shadow: 0.48874px 0 1px rgba(0, 30, 255, 0.5), -0.48874px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  75% {
+    text-shadow: 1.89485px 0 1px rgba(0, 30, 255, 0.5), -1.89485px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  80% {
+    text-shadow: 0.0833px 0 1px rgba(0, 30, 255, 0.5), -0.0833px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  85% {
+    text-shadow: 0.0977px 0 1px rgba(0, 30, 255, 0.5), -0.0977px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  90% {
+    text-shadow: 3.44334px 0 1px rgba(0, 30, 255, 0.5), -3.44334px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  95% {
+    text-shadow: 2.18418px 0 1px rgba(0, 30, 255, 0.5), -2.18418px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 2.62088px 0 1px rgba(0, 30, 255, 0.5), -2.62088px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
+  animation: textShadow 1.6s infinite;
+}
+
+html::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
+
+html::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
 }
 
 html body {
@@ -375,6 +542,14 @@ html body {
   padding: 0;
   overflow-x: hidden;
   color: #eee;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Dosis;
+}
+
+html body .flick {
   text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
   animation-duration: 0.01s;
   animation-name: textflicker;
@@ -385,7 +560,7 @@ html body {
 html body .container {
   width: 60%;
   margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 html body .row {
@@ -396,14 +571,12 @@ html body .row .column {
   width: 100%;
 }
 
-html body main#home {
+html body main {
   height: 100vh;
-  background-size: cover;
-  background-position: center;
   position: relative;
 }
 
-html body main#home .overlay {
+html body main .overlay {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -414,32 +587,28 @@ html body main#home .overlay {
   z-index: 1;
 }
 
-html body main section#banner {
+html body main .container {
+  padding: 3rem 2rem;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
   z-index: 2;
-  height: 100%;
 }
 
-html body main section#banner .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3rem 0;
-  height: 100%;
-}
-
-html body main section#banner .container .cover {
+html body main .cover {
   width: 20rem;
   height: 20rem;
+  margin: 0 auto;
   background-position: center;
   background-size: cover;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
   display: grid;
   place-items: center;
   position: relative;
 }
 
-html body main section#banner .container .cover h1 {
+html body main .cover h1 {
   font-family: AksiMosi;
   font-size: 500%;
   color: #fff;
@@ -448,14 +617,14 @@ html body main section#banner .container .cover h1 {
   position: relative;
 }
 
-html body main section#banner .container .cover h1 span {
+html body main .cover h1 span {
   position: absolute;
   font-size: 25%;
   left: 20%;
   top: -5%;
 }
 
-html body main section#banner .container .cover p {
+html body main .cover p {
   font-family: Another;
   text-transform: uppercase;
   position: absolute;
@@ -463,4 +632,105 @@ html body main section#banner .container .cover p {
   right: 5rem;
   font-size: 130%;
   bottom: 6.5rem;
+}
+
+html body main .content.last-posts {
+  margin-top: 3rem;
+}
+
+html body main .content h1,
+html body main .content h2,
+html body main .content h3,
+html body main .content h4,
+html body main .content h5,
+html body main .content h6 {
+  font-family: Another;
+  text-transform: uppercase;
+}
+
+html body main .content h1,
+html body main .content h2,
+html body main .content h3,
+html body main .content h4,
+html body main .content h5,
+html body main .content h6,
+html body main .content p,
+html body main .content ul {
+  width: 100%;
+}
+
+html body main .content a {
+  text-decoration: none;
+  color: #68d4ff;
+}
+
+html body main .content a:hover {
+  text-decoration: underline;
+}
+
+html body main .content audio {
+  width: 100%;
+}
+
+html body main .content .post-item {
+  margin-bottom: 3rem;
+}
+
+html body main .content .post-item .row {
+  gap: 3%;
+}
+
+html body main .content .post-item .row .column:nth-child(1) {
+  width: 28%;
+}
+
+html body main .content .post-item .row .column:nth-child(2) {
+  width: 69%;
+}
+
+html body main .content .post-item .row .column .thumb {
+  width: 100%;
+  height: auto;
+}
+
+html body main .content .post-item .row .column .tags-container {
+  margin-top: 2rem;
+}
+
+html body main .content .post-item .row .column .tags-container a {
+  color: yellow;
+  margin-right: 1rem;
+}
+
+html body main .content .post-item .row .column a {
+  text-decoration: none;
+  color: #68d4ff;
+}
+
+html body main .content .post-item .row .column a:hover {
+  text-decoration: underline;
+}
+
+html body main .content .post-item .row .column a h3 {
+  font-size: 135%;
+  color: #ea36af;
+  margin-top: 0;
+}
+
+html body main .content #pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 120%;
+}
+
+html body main .content #pagination a {
+  text-decoration: none;
+  color: #68d4ff;
+}
+
+html body main .content #pagination a:hover {
+  text-decoration: underline;
 }
