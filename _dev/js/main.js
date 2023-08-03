@@ -54,4 +54,23 @@ docReady(function () {
       }
     });
   }
+
+  // plyr audio player
+  const player = new Plyr('#player');
+
+  // contact form
+  let contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      let formData = getFormValues(contactForm);
+      sendByAction('POST', 'pp_contact', formData).then(function (response) {
+        if (response != null && response != '') {
+          contactForm.querySelector('button').innerHTML = response;
+          contactForm.querySelector('button').setAttribute('disabled', 'true');
+        }
+      });
+    });
+  }
 });

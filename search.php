@@ -1,20 +1,19 @@
 <?php 
     get_header();
-    $term = get_queried_object();
+    $search = filter_var($_GET['s'], FILTER_UNSAFE_RAW) ?? '';
 ?>
 
-<main id="category">
+<main id="search">
     <div class="overlay"></div>
     <div class="container">
         <?php get_template_part('parts/header_info'); ?>
         <?php get_template_part('parts/banner_min', null, [
-            'term_name' => $term->name,
-            'term_description' => $term->description
+            'search' => $search
         ]); ?>
         <?php get_template_part('elements/nav'); ?>
         <?php get_template_part('elements/category_selector'); ?>
         <?php get_template_part('parts/last_posts', null, [
-            'category_slug' => $term->slug
+            'search' => $search
         ]); ?>
     </div>    
 </main>

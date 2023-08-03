@@ -8,7 +8,9 @@
           'post_type' => 'post',
           'posts_per_page' => 10,
           'paged' => $paged,
-          'category_name' => !empty($args['category_slug']) ? $args['category_slug'] : null
+          'category_name' => !empty($args['category_slug']) ? $args['category_slug'] : null,
+          's' => !empty($args['search']) ? $args['search'] : null,
+          'tag' => !empty($args['tag']) ? $args['tag'] : null
         ];
 
         $query = new WP_Query( $queryArgs );
