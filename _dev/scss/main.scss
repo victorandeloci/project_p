@@ -276,6 +276,53 @@ html {
       }
     }
 
+    #links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          svg {
+            fill: yellow;
+          }
+        }
+
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+          fill: #fff;
+        }
+      }
+    }
+
+    .menu {
+      padding: .5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      border-top: solid 2px yellow;
+      border-bottom: solid 2px yellow;
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          font-family: Another;
+          color: yellow;
+          font-size: 150%;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
     main {
       height: 100vh;
       position: relative;
@@ -300,48 +347,85 @@ html {
         z-index: 2;
       }
 
-      .cover {
-        width: 20rem;
-        height: 20rem;
-        margin: 0 auto;
-        background-position: center;
-        background-size: cover;
-        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+      .category-selector {
+        width: 100%;
         display: grid;
-        place-items: center;
-        position: relative;
+        place-items: end;
+        margin-top: 5rem;
 
-        h1 {
-          font-family: AksiMosi;
-          font-size: 500%;
+        select {
+          background-color: transparent;
+          border: none;
+          border-bottom: solid 2px #fff;
+          cursor: pointer;
           color: #fff;
-          margin: 0;
-          text-align: center;
+          text-transform: uppercase;
+
+          option {
+            color: #000;
+          }
+        }
+      }
+
+      .banner-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+
+        .cover {
+          width: 20rem;
+          height: 20rem;
+          margin: 0 auto;
+          background-position: center;
+          background-size: cover;
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+          display: grid;
+          place-items: center;
           position: relative;
 
-          span {
+          h1 {
+            font-family: AksiMosi;
+            font-size: 500%;
+            color: #fff;
+            margin: 0;
+            text-align: center;
+            position: relative;
+
+            span {
+              position: absolute;
+              font-size: 25%;
+              left: 20%;
+              top: -5%;
+            }
+          }
+
+          p {
+            font-family: Another;
+            text-transform: uppercase;
             position: absolute;
-            font-size: 25%;
-            left: 20%;
-            top: -5%;
+            margin: 0;
+            right: 5rem;
+            font-size: 130%;
+            bottom: 6.5rem;
           }
         }
 
+        #links {
+          margin-top: 1rem;
+        }
+
         p {
-          font-family: Another;
-          text-transform: uppercase;
-          position: absolute;
-          margin: 0;
-          right: 5rem;
-          font-size: 130%;
-          bottom: 6.5rem;
+          width: 50%;
+          text-align: center;
         }
       }
 
       .content {
 
         &.last-posts {
-          margin-top: 3rem;
+          margin-top: 2rem;
         }
 
         h1,
@@ -416,7 +500,7 @@ html {
                 }
 
                 h3 {
-                  font-size: 135%;
+                  font-size: 120%;
                   color: #ea36af;
                   margin-top: 0;
                 }

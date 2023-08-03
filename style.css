@@ -571,6 +571,51 @@ html body .row .column {
   width: 100%;
 }
 
+html body #links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+html body #links a {
+  text-decoration: none;
+}
+
+html body #links a:hover svg {
+  fill: yellow;
+}
+
+html body #links a svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #fff;
+}
+
+html body .menu {
+  padding: .5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border-top: solid 2px yellow;
+  border-bottom: solid 2px yellow;
+}
+
+html body .menu li {
+  list-style: none;
+}
+
+html body .menu li a {
+  text-decoration: none;
+  font-family: Another;
+  color: yellow;
+  font-size: 150%;
+}
+
+html body .menu li a:hover {
+  text-decoration: underline;
+}
+
 html body main {
   height: 100vh;
   position: relative;
@@ -596,7 +641,35 @@ html body main .container {
   z-index: 2;
 }
 
-html body main .cover {
+html body main .category-selector {
+  width: 100%;
+  display: grid;
+  place-items: end;
+  margin-top: 5rem;
+}
+
+html body main .category-selector select {
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 2px #fff;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+html body main .category-selector select option {
+  color: #000;
+}
+
+html body main .banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+html body main .banner-container .cover {
   width: 20rem;
   height: 20rem;
   margin: 0 auto;
@@ -608,7 +681,7 @@ html body main .cover {
   position: relative;
 }
 
-html body main .cover h1 {
+html body main .banner-container .cover h1 {
   font-family: AksiMosi;
   font-size: 500%;
   color: #fff;
@@ -617,14 +690,14 @@ html body main .cover h1 {
   position: relative;
 }
 
-html body main .cover h1 span {
+html body main .banner-container .cover h1 span {
   position: absolute;
   font-size: 25%;
   left: 20%;
   top: -5%;
 }
 
-html body main .cover p {
+html body main .banner-container .cover p {
   font-family: Another;
   text-transform: uppercase;
   position: absolute;
@@ -634,8 +707,17 @@ html body main .cover p {
   bottom: 6.5rem;
 }
 
+html body main .banner-container #links {
+  margin-top: 1rem;
+}
+
+html body main .banner-container p {
+  width: 50%;
+  text-align: center;
+}
+
 html body main .content.last-posts {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 html body main .content h1,
@@ -712,7 +794,7 @@ html body main .content .post-item .row .column a:hover {
 }
 
 html body main .content .post-item .row .column a h3 {
-  font-size: 135%;
+  font-size: 120%;
   color: #ea36af;
   margin-top: 0;
 }

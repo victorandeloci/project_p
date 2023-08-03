@@ -7,7 +7,8 @@
         $queryArgs = [
           'post_type' => 'post',
           'posts_per_page' => 10,
-          'paged' => $paged
+          'paged' => $paged,
+          'category_name' => !empty($args['category_slug']) ? $args['category_slug'] : null
         ];
 
         $query = new WP_Query( $queryArgs );

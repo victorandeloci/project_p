@@ -8,15 +8,6 @@ function docReady(fn) {
   }
 }
 
-function inputHandler(masks, max, event) {
-  let c = event.target;
-  let v = c.value.replace(/\D/g, '');
-  let m = c.value.length > max ? 1 : 0;
-  VMasker(c).unMask();
-  VMasker(c).maskPattern(masks[m]);
-  c.value = VMasker.toPattern(v, masks[m]);
-}
-
 function getFormValues(element) {
   let formData = new FormData();
 
@@ -33,9 +24,9 @@ async function sendByAction(method, action, formData = null, params = null) {
 
     params['action'] = action;
     response = await fetch(apiUrl + '?' + new URLSearchParams(params))
-    .then(function(response) {
-      return response.text();
-    });
+      .then(function (response) {
+        return response.text();
+      });
 
   } else if (method == 'POST' || method == 'post') {
 
@@ -44,15 +35,23 @@ async function sendByAction(method, action, formData = null, params = null) {
       method: method,
       body: formData
     })
-    .then(function(response) {
-      return response.text();
-    });
+      .then(function (response) {
+        return response.text();
+      });
 
   }
 
   return response;
 }
 
-docReady(function() {
-  
+docReady(function () {
+  // category selector
+  let categorySelector = document.getElementById('category_selector');
+  if (categorySelector) {
+    categorySelector.addEventListener('change', function () {
+      if (categorySelector.value != null && categorySelector.value != '') {
+        window.location.href = siteUrl + '/category/' + categorySelector.value;
+      }
+    });
+  }
 });
