@@ -2352,7 +2352,7 @@ html body main .overlay {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(5px);
   z-index: 1;
 }
 

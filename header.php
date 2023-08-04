@@ -15,4 +15,4 @@
     </script>
     <script src="<?= get_template_directory_uri() ?>/main.min.js?v=1.0.0" charset="utf-8" defer></script>
   </head>
-  <body style="background-image: url(<?= get_template_directory_uri() ?>/assets/img/wall_4.jpeg);">
+  <body style="background-image: url(<?= get_template_directory_uri() ?>/assets/img/wall_7.jpeg);">
