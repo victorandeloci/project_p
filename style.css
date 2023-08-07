@@ -1952,6 +1952,7 @@ html::before {
 html body {
   margin: 0;
   padding: 0;
+  position: relative;
   overflow-x: hidden;
   color: #eee;
   background-color: #000;
@@ -2039,9 +2040,7 @@ html body .tags-container a {
   margin-bottom: .5rem;
 }
 
-html body .post-item .details {
-  margin-top: .5rem;
-  padding-left: 1rem;
+html body .details {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -2049,13 +2048,13 @@ html body .post-item .details {
   opacity: .5;
 }
 
-html body .post-item .details span {
+html body .details span {
   color: #fff;
   margin-right: 1rem;
   line-height: 0.5;
 }
 
-html body .post-item .details svg {
+html body .details svg {
   width: .75rem;
   height: .75rem;
   fill: #fff;
@@ -2233,6 +2232,17 @@ html body form button:hover {
   color: #000;
 }
 
+html body .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
 html body header {
   position: absolute;
   top: 0;
@@ -2323,6 +2333,11 @@ html body main#single .row .column:nth-child(2) h1 {
   text-transform: uppercase;
   color: var(--pink);
   font-size: 200%;
+  margin-bottom: 0;
+}
+
+html body main#single .row .column:nth-child(2) .details {
+  margin-bottom: 1rem;
 }
 
 html body main#single .row .column:nth-child(2) p {
@@ -2343,17 +2358,6 @@ html body main#category.contact .content, html body main#search.contact .content
 
 html body main#category.contact .content h3, html body main#search.contact .content h3, html body main#tag.contact .content h3, html body main#page.contact .content h3 {
   font-size: 130%;
-}
-
-html body main .overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  z-index: 1;
 }
 
 html body main .container {
@@ -2486,7 +2490,11 @@ html body main .content {
   --plyr-audio-control-color: #bbb;
 }
 
-html body main .content .plyr__controls {
+html body main .content .plyr {
+  margin-bottom: 1rem;
+}
+
+html body main .content .plyr .plyr__controls {
   background-color: #1e1e1e;
 }
 
@@ -2561,7 +2569,12 @@ html body main .content .post-item .row .column a:hover {
 html body main .content .post-item .row .column a h3 {
   font-size: 130%;
   color: var(--pink);
-  margin-top: 0;
+  margin: 0;
+}
+
+html body main .content .post-item .row .column .details {
+  margin-top: .5rem;
+  margin-bottom: 1rem;
 }
 
 html body main .content #pagination {
@@ -2650,4 +2663,44 @@ html body main .lists .playlist-item .row .column ul li a h3 {
   text-transform: uppercase;
   margin: 0;
   font-size: 100%;
+}
+
+html body main .lists .playlist-item .row .column ul li .details {
+  margin-top: .5rem;
+  padding-left: 1rem;
+}
+
+html body footer {
+  position: relative;
+  z-index: 1;
+}
+
+html body footer .container {
+  padding: 2rem;
+}
+
+html body footer .container hr {
+  margin: 0;
+}
+
+html body footer .container .row .column:nth-child(2) {
+  text-align: right;
+}
+
+html body footer .container .row .column p {
+  color: #fff;
+  margin-bottom: .5rem;
+}
+
+html body footer .container .row .column span {
+  color: #aaa;
+}
+
+html body footer .container .row .column span a {
+  text-decoration: none;
+  color: var(--pink);
+}
+
+html body footer .container .row .column span a:hover {
+  text-decoration: underline;
 }

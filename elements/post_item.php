@@ -7,6 +7,7 @@
         </div>
         <div class="column">
             <a href="<?= get_permalink() ?>"><h3><?= get_the_title() ?></h3></a>
+            <?php get_template_part('elements/post_details'); ?>
             <div class="post-content">
                 <?php if (!empty($args['is_first']) && $args['is_first'] == true) : ?>
                     <?php get_template_part('elements/podcast_player'); ?>

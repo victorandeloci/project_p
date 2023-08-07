@@ -250,6 +250,7 @@ html {
   body {
     margin: 0;
     padding: 0;
+    position: relative;
     overflow-x: hidden;
     color: #eee;
     background-color: #000;
@@ -338,27 +339,23 @@ html {
       }
     }
 
-    .post-item {
-      .details {
-        margin-top: .5rem;
-        padding-left: 1rem;
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: .5rem;
-        opacity: .5;
+    .details {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: .5rem;
+      opacity: .5;
 
-        span {
-          color: #fff;
-          margin-right: 1rem;
-          line-height: 0.5;
-        }
+      span {
+        color: #fff;
+        margin-right: 1rem;
+        line-height: 0.5;
+      }
 
-        svg {
-          width: .75rem;
-          height: .75rem;
-          fill: #fff;
-        }
+      svg {
+        width: .75rem;
+        height: .75rem;
+        fill: #fff;
       }
     }
 
@@ -555,6 +552,17 @@ html {
       }
     }
 
+    .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      z-index: 1;
+    }
+
     header {
       position: absolute;
       top: 0;
@@ -654,6 +662,11 @@ html {
                 text-transform: uppercase;
                 color: var(--pink);
                 font-size: 200%;
+                margin-bottom: 0;
+              }
+
+              .details {
+                margin-bottom: 1rem;
               }
 
               p {
@@ -693,17 +706,6 @@ html {
             }
           }
         }
-      }
-
-      .overlay {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(5px);
-        z-index: 1;
       }
 
       .container {
@@ -840,8 +842,11 @@ html {
         --plyr-color-main: var(--pink);
         --plyr-audio-control-color: #bbb;
 
-        .plyr__controls {
-          background-color: #1e1e1e;
+        .plyr {
+          margin-bottom: 1rem;
+          .plyr__controls {
+            background-color: #1e1e1e;
+          }
         }
 
         &.last-posts {
@@ -913,8 +918,13 @@ html {
                 h3 {
                   font-size: 130%;
                   color: var(--pink);
-                  margin-top: 0;
+                  margin: 0;
                 }
+              }
+
+              .details {
+                margin-top: .5rem;
+                margin-bottom: 1rem;
               }
             }
           }
@@ -1006,6 +1016,43 @@ html {
                       font-size: 100%;
                     }
                   }
+
+                  .details {
+                    margin-top: .5rem;
+                    padding-left: 1rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      .container {
+        padding: 2rem;
+        hr {
+          margin: 0;
+        }
+        .row {
+          .column {
+            &:nth-child(2) {
+              text-align: right;
+            }
+            p {
+              color: #fff;
+              margin-bottom: .5rem;
+            }
+            span {
+              color: #aaa;
+              a {
+                text-decoration: none;
+                color: var(--pink);
+                &:hover {
+                  text-decoration: underline;
                 }
               }
             }
