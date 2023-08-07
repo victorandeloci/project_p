@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <main id="single">
-    <div class="overlay"></div>
     <div class="container">
         <?php get_template_part('parts/header_info'); ?>
         <div class="row post-title">

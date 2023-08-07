@@ -4,7 +4,6 @@
 ?>
 
 <main id="category">
-    <div class="overlay"></div>
     <div class="container">
         <?php get_template_part('parts/header_info'); ?>
         <?php get_template_part('parts/banner_min', null, [
