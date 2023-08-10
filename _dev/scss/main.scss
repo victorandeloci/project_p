@@ -1,5 +1,5 @@
 /*!
-  Theme Name: Project P
+  Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
   Version: 1.0.0
@@ -844,6 +844,7 @@ html {
 
         .plyr {
           margin-bottom: 1rem;
+
           .plyr__controls {
             background-color: #1e1e1e;
           }
@@ -1032,25 +1033,32 @@ html {
     footer {
       position: relative;
       z-index: 1;
+
       .container {
         padding: 2rem;
+
         hr {
           margin: 0;
         }
+
         .row {
           .column {
             &:nth-child(2) {
               text-align: right;
             }
+
             p {
               color: #fff;
               margin-bottom: .5rem;
             }
+
             span {
               color: #aaa;
+
               a {
                 text-decoration: none;
                 color: var(--pink);
+
                 &:hover {
                   text-decoration: underline;
                 }
@@ -1062,3 +1070,5 @@ html {
     }
   }
 }
+
+@import './responsive';
