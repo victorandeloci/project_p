@@ -13,7 +13,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      PACKAGE_LABEL: Project P
+      PACKAGE_LABEL: Project P.
       PACKAGE_NAME: project_p
       RELEASE_TAG: 1.0.0
     steps:
