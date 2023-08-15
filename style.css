@@ -2296,16 +2296,16 @@ html body main {
   position: relative;
 }
 
-html body main#single .banner-container .links a:hover svg {
-  fill: var(--blue);
-}
-
 html body main#single .row {
   gap: 1rem;
 }
 
 html body main#single .row.post-title {
   margin-bottom: 2rem;
+}
+
+html body main#single .row.post-title .links a:hover svg {
+  fill: var(--blue);
 }
 
 html body main#single .row .column:nth-child(1) {
@@ -2346,6 +2346,10 @@ html body main#single .row .column:nth-child(2) p {
 
 html body main#category .banner-container .links a:hover svg, html body main#search .banner-container .links a:hover svg, html body main#tag .banner-container .links a:hover svg, html body main#page .banner-container .links a:hover svg {
   fill: var(--blue);
+}
+
+html body main#category .banner-container h2, html body main#search .banner-container h2, html body main#tag .banner-container h2, html body main#page .banner-container h2 {
+  margin-top: 1rem;
 }
 
 html body main#category .category-selector, html body main#search .category-selector, html body main#tag .category-selector, html body main#page .category-selector {
@@ -2471,7 +2475,7 @@ html body main .banner-container .cover p {
   text-transform: uppercase;
   position: absolute;
   margin: 0;
-  right: 5rem;
+  right: 1rem;
   font-size: 130%;
   bottom: 6.5rem;
 }

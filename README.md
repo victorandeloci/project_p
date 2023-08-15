@@ -1,4 +1,6 @@
-# WordPress theme template  
+# Project P.  
+Tema WordPress para blog de podcast  
+![Screenshot](screenshot.png)
 
 ## Desenvolvimento
 **Requer Node e NPM**  
@@ -18,4 +20,4 @@ Compilar pacote do tema:
 npm run build
 ```
 
-Arquivo <code>.zip</code> da última versão (disponível [aqui](https://github.com/ValkyriaTech/wordpress_theme_template/releases)) ou arquivos locais pós <code>build</code>
+Arquivo <code>.zip</code> da última versão (disponível [aqui](https://github.com/victorandeloci/project_p/releases)) ou arquivos locais pós <code>build</code>

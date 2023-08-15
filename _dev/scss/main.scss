@@ -618,23 +618,21 @@ html {
       position: relative;
 
       &#single {
-        .banner-container {
-          .links {
-            a {
-              &:hover {
-                svg {
-                  fill: var(--blue);
-                }
-              }
-            }
-          }
-        }
-
         .row {
           gap: 1rem;
 
           &.post-title {
             margin-bottom: 2rem;
+
+            .links {
+              a {
+                &:hover {
+                  svg {
+                    fill: var(--blue);
+                  }
+                }
+              }
+            }
           }
 
           .column {
@@ -690,6 +688,10 @@ html {
                 }
               }
             }
+          }
+
+          h2 {
+            margin-top: 1rem;
           }
         }
 
@@ -821,7 +823,7 @@ html {
             text-transform: uppercase;
             position: absolute;
             margin: 0;
-            right: 5rem;
+            right: 1rem;
             font-size: 130%;
             bottom: 6.5rem;
           }
