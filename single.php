@@ -12,7 +12,9 @@
             <div class="column">
                 <?php get_template_part('elements/links'); ?>
                 <h1><?= get_the_title() ?></h1>
-                <?php get_template_part('elements/post_details'); ?>
+                <?php get_template_part('elements/post_details', null, [
+                    'show_author' => true
+                ]); ?>
                 <p><?= get_the_excerpt() ?></p>
             </div>
         </div>

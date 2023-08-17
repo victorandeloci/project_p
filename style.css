@@ -2337,6 +2337,7 @@ html body main#single .row .column:nth-child(2) h1 {
 }
 
 html body main#single .row .column:nth-child(2) .details {
+  margin-top: .5rem;
   margin-bottom: 1rem;
 }
 
