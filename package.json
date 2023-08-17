@@ -1,6 +1,6 @@
 {
-  "name": "cool_theme",
-  "version": "0.0.1",
+  "name": "project_p",
+  "version": "1.0.0",
   "description": "",
   "main": "index.php",
   "scripts": {
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ValkyriaTech/wordpress_theme_template.git"
+    "url": "git+https://github.com/victorandeloci/project_p.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ValkyriaTech/wordpress_theme_template/issues"
+    "url": "https://github.com/victorandeloci/project_p/issues"
   },
-  "homepage": "https://github.com/ValkyriaTech/wordpress_theme_template#readme",
+  "homepage": "https://github.com/victorandeloci/project_p#readme",
   "dependencies": {
     "autoprefixer": "^10.4.14",
     "node-sass": "^9.0.0",

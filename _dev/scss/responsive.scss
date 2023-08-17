@@ -1,0 +1,192 @@
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    html {
+        body {
+            .container {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    html {
+        body {
+            .container {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    html {
+        body {
+            .container {
+                width: 100%;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-end;
+                gap: .5rem;
+            }
+
+            .menu {
+                li {
+                    a {
+                        font-size: 120%;
+                    }
+                }
+            }
+
+            main {
+                &#single {
+                    .row {
+                        &.post-title {
+                            flex-direction: column;
+
+                            .column {
+                                &:nth-child(1) {
+                                    width: 100%;
+                                }
+
+                                &:nth-child(2) {
+                                    width: 100%;
+
+                                    .details {
+                                        margin-top: .5rem;
+                                        margin-bottom: 0;
+                                    }
+
+                                    p {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .banner-container {
+                    margin-top: 3rem;
+
+                    &.min {
+                        .row {
+                            .column {
+                                &:nth-child(1) {
+                                    display: none;
+                                }
+
+                                &:nth-child(2) {
+                                    h2 {
+                                        margin-top: 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        .links {
+                            display: none;
+                        }
+                    }
+
+                    .cover {
+                        width: 100%;
+                        height: auto;
+                        padding-top: 100%;
+                        font-size: 90%;
+
+                        h1 {
+                            position: absolute;
+                        }
+
+                        p {
+                            width: max-content;
+                            right: 4rem;
+                        }
+                    }
+
+                    p {
+                        width: 90%;
+                    }
+                }
+
+                .category-selector {
+                    margin-top: 3rem;
+                }
+
+                .content {
+                    .post-item {
+                        .row {
+                            flex-direction: column;
+                            gap: 1rem;
+
+                            .column {
+                                &:nth-child(1) {
+                                    width: 100%;
+                                }
+
+                                &:nth-child(2) {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .lists {
+                    .playlist-item {
+                        .row {
+                            flex-direction: column;
+                            gap: 1rem;
+
+                            .column {
+                                &:nth-child(1) {
+                                    width: 100%;
+                                }
+
+                                &:nth-child(2) {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            footer {
+                .container {
+                    .row {
+                        flex-direction: column;
+
+                        .column {
+                            &:nth-child(2) {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1890px) {
+    html {
+        body {
+            .container {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 2500px) {
+    html {
+        body {
+            .container {
+                width: 40%;
+            }
+        }
+    }
+}

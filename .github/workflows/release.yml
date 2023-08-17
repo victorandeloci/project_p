@@ -13,9 +13,9 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      PACKAGE_LABEL: Cool Theme
-      PACKAGE_NAME: cool_theme
-      RELEASE_TAG: 0.0.1
+      PACKAGE_LABEL: Project P.
+      PACKAGE_NAME: project_p
+      RELEASE_TAG: 1.0.0
     steps:
       - uses: actions/checkout@v2
 

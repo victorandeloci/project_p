@@ -7,11 +7,13 @@
 
     <?php wp_head(); ?>
 
-    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/style.css?v=0.0.1">
+    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/style.css?v=<?= PP_VERSION ?>">
 
-    <script src="<?= get_template_directory_uri() ?>/main.min.js?v=0.0.1" charset="utf-8" defer></script>
+    <script>
+      const siteUrl = '<?= get_site_url() ?>';
+      const apiUrl = '<?= get_site_url() ?>/wp-admin/admin-ajax.php';
+    </script>
+    <script src="<?= get_template_directory_uri() ?>/main.min.js?v=<?= PP_VERSION ?>" charset="utf-8" defer></script>
   </head>
-  <body>
-    <header>
-      <?php get_template_part('elements/nav'); ?>
-    </header>
+  <body style="background-image: url(<?= get_template_directory_uri() ?>/assets/img/wall_7.jpeg);">
+    <div class="overlay"></div>
