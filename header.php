@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= bloginfo('name') ?></title>
+    <meta name="theme-color" content="#000000">
+    <title><?= wp_title() ?></title>
 
     <?php wp_head(); ?>
 
