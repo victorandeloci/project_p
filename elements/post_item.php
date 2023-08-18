@@ -2,7 +2,16 @@
     <div class="row">
         <div class="column">
             <a href="<?= get_permalink() ?>">
-                <img src="<?= get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" class="thumb" alt="<?= get_the_title() ?>">
+                <?php if (!empty($args['is_first']) && $args['is_first'] == true) : ?>
+                    <img src="<?= get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" class="thumb" alt="<?= get_the_title() ?>">
+                <?php else : ?>
+                    <img 
+                        class="thumb"
+                        alt="<?= get_the_title() ?>"
+                        src="<?= get_template_directory_uri() . '/assets/img/default-image.png' ?>"
+                        lazy-load-img="<?= get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>"
+                    >
+                <?php endif; ?>  
             </a>
         </div>
         <div class="column">

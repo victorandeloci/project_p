@@ -2,7 +2,7 @@
   Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
-  Version: 1.0.0
+  Version: 1.1.0
 */
 
 @import '../plugins/css/normalize';
@@ -802,6 +802,7 @@ html {
           display: grid;
           place-items: center;
           position: relative;
+          user-select: none;
 
           h1 {
             font-family: AksiMosi;

@@ -1,6 +1,6 @@
 <?php
 
-define('PP_VERSION', '1.0.0');
+define('PP_VERSION', '1.1.0');
 
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'custom-logo' );
@@ -62,7 +62,7 @@ add_action( 'init', 'create_custom_posttypes' );
 // ========== CONTACT ==========
 
 function pp_contact() {
-  $to = 'contato@podcastporao.blog';
+  $to = 'contato@podcastporao.com.br';
 
   $name   = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
   $email  = filter_var($_POST['email'], FILTER_SANITIZE_STRING);

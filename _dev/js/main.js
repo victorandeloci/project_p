@@ -73,4 +73,29 @@ docReady(function () {
       });
     });
   }
+
+  // lazy load
+  elementsIndexes = Array.from(document.querySelectorAll('[lazy-load-img]'));
+
+  let initVisibleBackgrounds = function () {
+    let currentScroll = document.scrollingElement.scrollTop;
+
+    elementsIndexes.forEach((element, i) => {
+      if ((currentScroll > element.getBoundingClientRect().top - 250)) {
+        let background = element.getAttribute('lazy-load-img');
+        element.setAttribute('src', background);
+        elementsIndexes.splice(i, 1);
+
+        element.removeAttribute('lazy-load-img');
+      }
+    });
+  };
+
+  if (elementsIndexes !== null && elementsIndexes.length > 0) {
+    initVisibleBackgrounds();
+    window.addEventListener('scroll', function (e) {
+      if (elementsIndexes !== null && elementsIndexes.length > 0)
+        initVisibleBackgrounds();
+    }, false);
+  }
 });
