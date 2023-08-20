@@ -3,7 +3,7 @@
   Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
-  Version: 1.1.0
+  Version: 1.1.1
 */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -2180,19 +2180,19 @@ html body .glitch .glitch__layers .glitch__layer {
 html body .glitch .glitch__layers .glitch__layer:nth-child(1) {
   transform: translateX(-5%);
   animation: glitch-anim-1 2s infinite linear alternate;
-  filter: hue-rotate(45deg);
+  filter: hue-rotate(180deg);
 }
 
 html body .glitch .glitch__layers .glitch__layer:nth-child(2) {
   transform: translateX(3%) translateY(3%);
   animation: glitch-anim-2 2.3s -.8s infinite linear alternate;
-  filter: hue-rotate(160deg);
+  filter: hue-rotate(300deg);
 }
 
 html body .glitch .glitch__layers .glitch__layer:nth-child(3) {
   transform: translateX(5%);
   animation: glitch-anim-flash 1s infinite linear;
-  filter: hue-rotate(260deg);
+  filter: hue-rotate(240deg);
 }
 
 html body form {
@@ -2747,6 +2747,10 @@ html body footer .container .row .column span a:hover {
   html body main#single .row.post-title .column:nth-child(2) .details {
     margin-top: .5rem;
     margin-bottom: 0;
+    flex-wrap: wrap;
+  }
+  html body main#single .row.post-title .column:nth-child(2) .details .author {
+    width: 100%;
   }
   html body main#single .row.post-title .column:nth-child(2) p {
     display: none;
