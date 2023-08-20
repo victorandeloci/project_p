@@ -2,7 +2,7 @@
   Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
-  Version: 1.1.0
+  Version: 1.1.1
 */
 
 @import '../plugins/css/normalize';
@@ -497,19 +497,19 @@ html {
           &:nth-child(1) {
             transform: translateX(-5%);
             animation: glitch-anim-1 2s infinite linear alternate;
-            filter: hue-rotate(45deg);
+            filter: hue-rotate(180deg);
           }
 
           &:nth-child(2) {
             transform: translateX(3%) translateY(3%);
             animation: glitch-anim-2 2.3s -.8s infinite linear alternate;
-            filter: hue-rotate(160deg);
+            filter: hue-rotate(300deg);
           }
 
           &:nth-child(3) {
             transform: translateX(5%);
             animation: glitch-anim-flash 1s infinite linear;
-            filter: hue-rotate(260deg);
+            filter: hue-rotate(240deg);
           }
         }
       }

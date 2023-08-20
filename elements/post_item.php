@@ -8,7 +8,7 @@
                     <img 
                         class="thumb"
                         alt="<?= get_the_title() ?>"
-                        src="<?= get_template_directory_uri() . '/assets/img/default-image.png' ?>"
+                        src="<?= get_template_directory_uri() . '/assets/img/default-image.jpg' ?>"
                         lazy-load-img="<?= get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>"
                     >
                 <?php endif; ?>  

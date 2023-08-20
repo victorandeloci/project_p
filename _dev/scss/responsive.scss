@@ -56,6 +56,11 @@
                                     .details {
                                         margin-top: .5rem;
                                         margin-bottom: 0;
+                                        flex-wrap: wrap;
+
+                                        .author {
+                                            width: 100%;
+                                        }
                                     }
 
                                     p {
