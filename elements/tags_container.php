@@ -4,7 +4,7 @@
     $tags = get_the_tags(get_the_id());
     if ($tags) :
       foreach ($tags as $tag) :
-        if ($i <= 4 || is_single()) :
+        if ($i <= 4 || (is_single() && !empty($args['show_least']) && $args['show_least'] == false)) :
   ?>
           <a
             href="<?= get_home_url() ?>/tag/<?= str_replace(' ', '-', iconv('UTF-8', 'ASCII//TRANSLIT', $tag->name)) ?>"

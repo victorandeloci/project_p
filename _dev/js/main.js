@@ -56,7 +56,14 @@ docReady(function () {
   }
 
   // plyr audio player
-  const player = new Plyr('#player');
+  let playerElements = document.querySelectorAll('audio');
+  if (playerElements) {
+    playerElements.forEach((audioElement) => {
+      let player = new Plyr(audioElement, {
+        controls: ['play', 'progress', 'current-time', 'mute', 'settings']
+      });
+    });
+  }
 
   // contact form
   let contactForm = document.getElementById('contactForm');

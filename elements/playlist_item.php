@@ -10,7 +10,7 @@
         </div>
         <div class="column">
             <div class="info">
-                <h2><?= get_the_title() ?></h2>
+                <a href="<?= get_permalink() ?>"><h2><?= get_the_title() ?></h2></a>
                 <p><?= get_the_excerpt() ?></p>
             </div>
             <ul>
@@ -34,7 +34,7 @@
                             endwhile;
                         endif;
                 ?>
-            </ul>                
+            </ul>
             <?php endif; ?>
         </div>
     </div>
