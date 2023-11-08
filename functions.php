@@ -1,6 +1,6 @@
 <?php
 
-define('PP_VERSION', '1.1.1');
+define('PP_VERSION', '1.2.1');
 
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'custom-logo' );
@@ -44,17 +44,17 @@ function create_custom_posttypes() {
   );
 
   register_post_type( 'playlist',
-    array(
-      'labels' => array(
+    [
+      'labels' => [
         'name' => __( 'Playlists' ),
         'singular_name' => __( 'Playlists' )
-      ),
+      ],
       'public' => true,
       'has_archive' => true,
-      'rewrite' => array('slug' => 'playlist'),
+      'rewrite' => ['slug' => 'playlist'],
       'show_in_rest' => true,
-			'supports' => array( 'title', 'excerpt', 'thumbnail', 'custom-fields')
-    )
+			'supports' => ['title', 'excerpt', 'thumbnail', 'custom-fields']
+    ]
   );
 }
 add_action( 'init', 'create_custom_posttypes' );

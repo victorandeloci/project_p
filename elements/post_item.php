@@ -21,11 +21,16 @@
                 <?php if (!empty($args['is_first']) && $args['is_first'] == true) : ?>
                     <?php get_template_part('elements/podcast_player'); ?>
                     <?=  get_the_content() ?>
+                <?php elseif (!empty($args['show_player']) && $args['show_player'] == true) : ?>
+                    <?php get_template_part('elements/podcast_player'); ?>
+                    <?= get_the_excerpt() ?>
                 <?php else : ?>
                     <?= get_the_excerpt() ?>
                 <?php endif; ?>                
             </div>
-            <?php get_template_part('elements/tags_container'); ?>
+            <?php get_template_part('elements/tags_container', null, [
+                'show_least' => true
+            ]); ?>
         </div>
     </div>
 </div>

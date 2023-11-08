@@ -2,7 +2,7 @@
   Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
-  Version: 1.1.1
+  Version: 1.2.1
 */
 
 @import '../plugins/css/normalize';
@@ -981,11 +981,20 @@ html {
               }
 
               .info {
-                h2 {
-                  margin-top: 0;
-                  font-family: Another;
-                  text-transform: uppercase;
+                a {
                   color: var(--pink);
+                  text-decoration: none;
+
+                  &:hover {
+                    text-decoration: underline;
+                  }
+
+                  h2 {
+                    margin-top: 0;
+                    font-family: Another;
+                    text-transform: uppercase;
+                    color: var(--pink);
+                  }
                 }
 
                 p {
