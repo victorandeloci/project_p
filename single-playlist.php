@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+    $banner = get_page_by_path('banner', OBJECT, 'home');
+    get_header();
+?>
 
 <main id="single">
     <div class="container">
@@ -6,7 +9,7 @@
         <div class="row post-title">
             <div class="column">
                 <section class="banner-container">
-                    <div class="cover" style="background-image: url(<?= get_the_post_thumbnail_url() ?>);"></div>                    
+                    <div class="cover" style="background-image: url(<?= get_post_meta($banner->ID, 'cover_small', true) ?>);"></div>
                 </section>
             </div>
             <div class="column">
