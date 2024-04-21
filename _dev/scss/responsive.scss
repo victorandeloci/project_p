@@ -72,6 +72,18 @@
                     }
                 }
 
+                &#home {
+                    .banner-container {
+                        .cover {
+                            padding-top: 0;
+                        }
+
+                        h2, p {
+                            width: 90%;
+                        }
+                    }
+                }
+
                 .banner-container {
                     margin-top: 3rem;
 
@@ -111,7 +123,7 @@
                         }
                     }
 
-                    p {
+                    h2, p {
                         width: 90%;
                     }
                 }

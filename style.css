@@ -3,7 +3,7 @@
   Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
-  Version: 1.2.2
+  Version: 1.2.3
 */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -1915,9 +1915,90 @@ a.plyr__control:before {
   }
 }
 
+@keyframes glitch-anim-1 {
+  0% {
+    clip-path: polygon(0 0%, 100% 0%, 100% 5%, 0 5%);
+  }
+  10% {
+    clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
+  }
+  20% {
+    clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
+  }
+  30% {
+    clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
+  }
+  40% {
+    clip-path: polygon(0 35%, 100% 35%, 100% 35%, 0 35%);
+  }
+  50% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 46%, 0 46%);
+  }
+  60% {
+    clip-path: polygon(0 50%, 100% 50%, 100% 70%, 0 70%);
+  }
+  70% {
+    clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+  }
+  80% {
+    clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+  }
+  90% {
+    clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+  }
+  100% {
+    clip-path: polygon(0 60%, 100% 60%, 100% 70%, 0 70%);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip-path: polygon(0 15%, 100% 15%, 100% 30%, 0 30%);
+  }
+  15% {
+    clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%);
+  }
+  25% {
+    clip-path: polygon(0 8%, 100% 8%, 100% 20%, 0 20%);
+  }
+  30% {
+    clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+  }
+  45% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 45%, 0 45%);
+  }
+  50% {
+    clip-path: polygon(0 50%, 100% 50%, 100% 57%, 0 57%);
+  }
+  65% {
+    clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+  }
+  75% {
+    clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+  }
+  80% {
+    clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
+  }
+  95% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 60%, 0 60%);
+  }
+  100% {
+    clip-path: polygon(0 11%, 100% 11%, 100% 15%, 0 15%);
+  }
+}
+
+@keyframes glitch-anim-flash {
+  0% {
+    opacity: .2;
+  }
+  30%,
+  100% {
+    opacity: 0;
+  }
+}
+
 html {
   scroll-behavior: smooth;
-  animation: textShadow 1.6s infinite;
 }
 
 html::after {
@@ -2023,6 +2104,7 @@ html body .menu li a {
   font-family: Another;
   color: yellow;
   font-size: 150%;
+  animation: textShadow 1.6s infinite;
 }
 
 html body .menu li a:hover {
@@ -2052,94 +2134,13 @@ html body .details span {
   color: #fff;
   margin-right: 1rem;
   line-height: 0.5;
+  animation: textShadow 1.6s infinite;
 }
 
 html body .details svg {
   width: .75rem;
   height: .75rem;
   fill: #fff;
-}
-
-@keyframes glitch-anim-1 {
-  0% {
-    clip-path: polygon(0 0%, 100% 0%, 100% 5%, 0 5%);
-  }
-  10% {
-    clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
-  }
-  20% {
-    clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
-  }
-  30% {
-    clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
-  }
-  40% {
-    clip-path: polygon(0 35%, 100% 35%, 100% 35%, 0 35%);
-  }
-  50% {
-    clip-path: polygon(0 45%, 100% 45%, 100% 46%, 0 46%);
-  }
-  60% {
-    clip-path: polygon(0 50%, 100% 50%, 100% 70%, 0 70%);
-  }
-  70% {
-    clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
-  }
-  80% {
-    clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-  }
-  90% {
-    clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
-  }
-  100% {
-    clip-path: polygon(0 60%, 100% 60%, 100% 70%, 0 70%);
-  }
-}
-
-@keyframes glitch-anim-2 {
-  0% {
-    clip-path: polygon(0 15%, 100% 15%, 100% 30%, 0 30%);
-  }
-  15% {
-    clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%);
-  }
-  25% {
-    clip-path: polygon(0 8%, 100% 8%, 100% 20%, 0 20%);
-  }
-  30% {
-    clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
-  }
-  45% {
-    clip-path: polygon(0 45%, 100% 45%, 100% 45%, 0 45%);
-  }
-  50% {
-    clip-path: polygon(0 50%, 100% 50%, 100% 57%, 0 57%);
-  }
-  65% {
-    clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
-  }
-  75% {
-    clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-  }
-  80% {
-    clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
-  }
-  95% {
-    clip-path: polygon(0 45%, 100% 45%, 100% 60%, 0 60%);
-  }
-  100% {
-    clip-path: polygon(0 11%, 100% 11%, 100% 15%, 0 15%);
-  }
-}
-
-@keyframes glitch-anim-flash {
-  0% {
-    opacity: .2;
-  }
-  30%,
-  100% {
-    opacity: 0;
-  }
 }
 
 html body .glitch {
@@ -2243,6 +2244,10 @@ html body .overlay {
   z-index: 1;
 }
 
+html body p, html body li, html body h1, html body h2, html body h3, html body h4, html body h5, html body h6 {
+  animation: textShadow 1.6s infinite;
+}
+
 html body header {
   position: absolute;
   top: 0;
@@ -2304,12 +2309,12 @@ html body main#single .row.post-title {
   margin-bottom: 2rem;
 }
 
-html body main#single .row.post-title .links a:hover svg {
-  fill: var(--blue);
+html body main#single .row.post-title .column:nth-child(1) {
+  width: max-content;
 }
 
-html body main#single .row .column:nth-child(1) {
-  width: max-content;
+html body main#single .row.post-title .column .links a:hover svg {
+  fill: var(--blue);
 }
 
 html body main#single .row .column:nth-child(1) .banner-container {
@@ -2389,6 +2394,7 @@ html body main .category-selector select {
   color: #fff;
   text-transform: uppercase;
   outline: 0;
+  animation: textShadow 1.6s infinite;
 }
 
 html body main .category-selector select option {
@@ -2425,7 +2431,7 @@ html body main .banner-container.min .row .column:nth-child(2) {
   align-items: flex-start;
 }
 
-html body main .banner-container.min .row .column:nth-child(2) h2 {
+html body main .banner-container.min .row .column:nth-child(2) h1, html body main .banner-container.min .row .column:nth-child(2) h2 {
   font-family: Another;
   text-transform: uppercase;
   color: var(--pink);
@@ -2433,7 +2439,7 @@ html body main .banner-container.min .row .column:nth-child(2) h2 {
   margin-bottom: .5rem;
 }
 
-html body main .banner-container.min .row .column:nth-child(2) h2 span {
+html body main .banner-container.min .row .column:nth-child(2) h1 span, html body main .banner-container.min .row .column:nth-child(2) h2 span {
   color: #fff;
 }
 
@@ -2486,9 +2492,12 @@ html body main .banner-container .links {
   margin-top: 1rem;
 }
 
-html body main .banner-container p {
+html body main .banner-container h2 {
+  font-size: 100%;
+  font-weight: normal;
   width: 50%;
   text-align: center;
+  animation: textShadow 1.6s infinite;
 }
 
 html body main .content {
@@ -2516,6 +2525,7 @@ html body main .content h5,
 html body main .content h6 {
   font-family: Another;
   text-transform: uppercase;
+  animation: textShadow 1.6s infinite;
 }
 
 html body main .content h1,
@@ -2527,11 +2537,13 @@ html body main .content h6,
 html body main .content p,
 html body main .content ul {
   width: 100%;
+  animation: textShadow 1.6s infinite;
 }
 
 html body main .content a {
   text-decoration: none;
   color: var(--blue);
+  animation: textShadow 1.6s infinite;
 }
 
 html body main .content a:hover {
@@ -2583,6 +2595,10 @@ html body main .content .post-item .row .column .details {
   margin-bottom: 1rem;
 }
 
+html body main .content .post-item .row .column .post-content {
+  animation: textShadow 1.6s infinite;
+}
+
 html body main .content #pagination {
   width: 100%;
   display: flex;
@@ -2626,7 +2642,7 @@ html body main .lists .playlist-item .row .column .thumb {
   height: 15rem;
   background-size: cover;
   background-position: center;
-  filter: grayscale(75%);
+  filter: grayscale(25%);
 }
 
 html body main .lists .playlist-item .row .column .info a {
@@ -2764,6 +2780,12 @@ html body footer .container .row .column span a:hover {
   html body main#single .row.post-title .column:nth-child(2) p {
     display: none;
   }
+  html body main#home .banner-container .cover {
+    padding-top: 0;
+  }
+  html body main#home .banner-container h2, html body main#home .banner-container p {
+    width: 90%;
+  }
   html body main .banner-container {
     margin-top: 3rem;
   }
@@ -2789,7 +2811,7 @@ html body footer .container .row .column span a:hover {
     width: max-content;
     right: 4rem;
   }
-  html body main .banner-container p {
+  html body main .banner-container h2, html body main .banner-container p {
     width: 90%;
   }
   html body main .category-selector {

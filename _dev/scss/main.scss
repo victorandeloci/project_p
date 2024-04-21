@@ -2,7 +2,7 @@
   Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
-  Version: 1.2.2
+  Version: 1.2.3
 */
 
 @import '../plugins/css/normalize';
@@ -214,9 +214,111 @@
   }
 }
 
+@keyframes glitch-anim-1 {
+  0% {
+    clip-path: polygon(0 0%, 100% 0%, 100% 5%, 0 5%);
+  }
+
+  10% {
+    clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
+  }
+
+  20% {
+    clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
+  }
+
+  30% {
+    clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
+  }
+
+  40% {
+    clip-path: polygon(0 35%, 100% 35%, 100% 35%, 0 35%);
+  }
+
+  50% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 46%, 0 46%);
+  }
+
+  60% {
+    clip-path: polygon(0 50%, 100% 50%, 100% 70%, 0 70%);
+  }
+
+  70% {
+    clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+  }
+
+  80% {
+    clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+  }
+
+  90% {
+    clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+  }
+
+  100% {
+    clip-path: polygon(0 60%, 100% 60%, 100% 70%, 0 70%);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip-path: polygon(0 15%, 100% 15%, 100% 30%, 0 30%);
+  }
+
+  15% {
+    clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%);
+  }
+
+  25% {
+    clip-path: polygon(0 8%, 100% 8%, 100% 20%, 0 20%);
+  }
+
+  30% {
+    clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
+  }
+
+  45% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 45%, 0 45%);
+  }
+
+  50% {
+    clip-path: polygon(0 50%, 100% 50%, 100% 57%, 0 57%);
+  }
+
+  65% {
+    clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
+  }
+
+  75% {
+    clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+  }
+
+  80% {
+    clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
+  }
+
+  95% {
+    clip-path: polygon(0 45%, 100% 45%, 100% 60%, 0 60%);
+  }
+
+  100% {
+    clip-path: polygon(0 11%, 100% 11%, 100% 15%, 0 15%);
+  }
+}
+
+@keyframes glitch-anim-flash {
+  0% {
+    opacity: .2;
+  }
+
+  30%,
+  100% {
+    opacity: 0;
+  }
+}
+
 html {
   scroll-behavior: smooth;
-  animation: textShadow 1.6s infinite;
 
   &::after {
     content: " ";
@@ -320,6 +422,7 @@ html {
           font-family: Another;
           color: yellow;
           font-size: 150%;
+          animation: textShadow 1.6s infinite;
 
           &:hover {
             text-decoration: underline;
@@ -350,6 +453,7 @@ html {
         color: #fff;
         margin-right: 1rem;
         line-height: 0.5;
+        animation: textShadow 1.6s infinite;
       }
 
       svg {
@@ -357,110 +461,7 @@ html {
         height: .75rem;
         fill: #fff;
       }
-    }
-
-    @keyframes glitch-anim-1 {
-      0% {
-        clip-path: polygon(0 0%, 100% 0%, 100% 5%, 0 5%);
-      }
-
-      10% {
-        clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
-      }
-
-      20% {
-        clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
-      }
-
-      30% {
-        clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
-      }
-
-      40% {
-        clip-path: polygon(0 35%, 100% 35%, 100% 35%, 0 35%);
-      }
-
-      50% {
-        clip-path: polygon(0 45%, 100% 45%, 100% 46%, 0 46%);
-      }
-
-      60% {
-        clip-path: polygon(0 50%, 100% 50%, 100% 70%, 0 70%);
-      }
-
-      70% {
-        clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
-      }
-
-      80% {
-        clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-      }
-
-      90% {
-        clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
-      }
-
-      100% {
-        clip-path: polygon(0 60%, 100% 60%, 100% 70%, 0 70%);
-      }
-    }
-
-    @keyframes glitch-anim-2 {
-      0% {
-        clip-path: polygon(0 15%, 100% 15%, 100% 30%, 0 30%);
-      }
-
-      15% {
-        clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%);
-      }
-
-      25% {
-        clip-path: polygon(0 8%, 100% 8%, 100% 20%, 0 20%);
-      }
-
-      30% {
-        clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
-      }
-
-      45% {
-        clip-path: polygon(0 45%, 100% 45%, 100% 45%, 0 45%);
-      }
-
-      50% {
-        clip-path: polygon(0 50%, 100% 50%, 100% 57%, 0 57%);
-      }
-
-      65% {
-        clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
-      }
-
-      75% {
-        clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-      }
-
-      80% {
-        clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
-      }
-
-      95% {
-        clip-path: polygon(0 45%, 100% 45%, 100% 60%, 0 60%);
-      }
-
-      100% {
-        clip-path: polygon(0 11%, 100% 11%, 100% 15%, 0 15%);
-      }
-    }
-
-    @keyframes glitch-anim-flash {
-      0% {
-        opacity: .2;
-      }
-
-      30%,
-      100% {
-        opacity: 0;
-      }
-    }
+    }    
 
     .glitch {
       position: relative;
@@ -563,6 +564,10 @@ html {
       z-index: 1;
     }
 
+    p, li, h1, h2, h3, h4, h5, h6 {
+      animation: textShadow 1.6s infinite;
+    }
+
     header {
       position: absolute;
       top: 0;
@@ -624,11 +629,17 @@ html {
           &.post-title {
             margin-bottom: 2rem;
 
-            .links {
-              a {
-                &:hover {
-                  svg {
-                    fill: var(--blue);
+            .column {
+              &:nth-child(1) {
+                width: max-content;
+              }
+
+              .links {
+                a {
+                  &:hover {
+                    svg {
+                      fill: var(--blue);
+                    }
                   }
                 }
               }
@@ -637,8 +648,6 @@ html {
 
           .column {
             &:nth-child(1) {
-              width: max-content;
-
               .banner-container {
                 margin-bottom: 0;
                 align-items: flex-start;
@@ -734,6 +743,7 @@ html {
           color: #fff;
           text-transform: uppercase;
           outline: 0;
+          animation: textShadow 1.6s infinite;
 
           option {
             color: #000;
@@ -770,7 +780,7 @@ html {
                 justify-content: flex-end;
                 align-items: flex-start;
 
-                h2 {
+                h1, h2 {
                   font-family: Another;
                   text-transform: uppercase;
                   color: var(--pink);
@@ -835,9 +845,12 @@ html {
           margin-top: 1rem;
         }
 
-        p {
+        h2 {
+          font-size: 100%;
+          font-weight: normal;
           width: 50%;
           text-align: center;
+          animation: textShadow 1.6s infinite;
         }
       }
 
@@ -866,6 +879,7 @@ html {
         h6 {
           font-family: Another;
           text-transform: uppercase;
+          animation: textShadow 1.6s infinite;
         }
 
         h1,
@@ -877,11 +891,13 @@ html {
         p,
         ul {
           width: 100%;
+          animation: textShadow 1.6s infinite;
         }
 
         a {
           text-decoration: none;
           color: var(--blue);
+          animation: textShadow 1.6s infinite;
 
           &:hover {
             text-decoration: underline;
@@ -931,6 +947,10 @@ html {
                 margin-top: .5rem;
                 margin-bottom: 1rem;
               }
+
+              .post-content {
+                animation: textShadow 1.6s infinite;
+              }
             }
           }
         }
@@ -977,7 +997,7 @@ html {
                 height: 15rem;
                 background-size: cover;
                 background-position: center;
-                filter: grayscale(75%);
+                filter: grayscale(25%);
               }
 
               .info {

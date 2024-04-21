@@ -11,13 +11,13 @@
             <div class="column">
                 <?php get_template_part('elements/links'); ?>
                 <?php if (!empty($args['term_name']) || !empty($args['search']) || !empty($args['tag']) || !empty($args['page_title'])) : ?>
-                    <h2><?= !empty($args['term_name']) 
+                    <h1><?= !empty($args['term_name']) 
                                 ? $args['term_name'] 
                                 : (!empty($args['search']) 
                                         ? ('<span>Busca por</span> ' . $args['search']) 
                                         : (!empty($args['tag']) 
                                                 ? ('<span>Marcados em</span> #' . $args['tag']) 
-                                                : $args['page_title'])) ?></h2>
+                                                : $args['page_title'])) ?></h1>
                 <?php endif; ?>
                 <?php if (!empty($args['term_description'])) : ?>
                     <p><?= $args['term_description'] ?></p>

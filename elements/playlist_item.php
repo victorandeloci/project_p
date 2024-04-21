@@ -2,11 +2,6 @@
     <div class="row">
         <div class="column glitch">
             <div class="thumb" style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>);"></div>
-            <div class="glitch__layers">
-                <div class="glitch__layer" style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>);"></div>
-                <div class="glitch__layer" style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>);"></div>
-                <div class="glitch__layer" style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>);"></div>
-            </div>
         </div>
         <div class="column">
             <div class="info">
