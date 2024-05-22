@@ -18,7 +18,7 @@
             <input placeholder="Nome" type="text" name="name" id="name" required>
             <input placeholder="E-mail" type="email" name="email" id="email" required>
             <textarea placeholder="Mensagem" name="message" id="message"></textarea>
-            <button type="submit">Enviar</button>
+            <button class="btn" type="submit">Enviar</button>
         </form>
     </div>    
 </main>
