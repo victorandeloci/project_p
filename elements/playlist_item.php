@@ -8,16 +8,17 @@
                 <a href="<?= get_permalink() ?>"><h2><?= get_the_title() ?></h2></a>
                 <p><?= get_the_excerpt() ?></p>
             </div>
-            <ul>
-                <?php 
-                    if (!empty(get_post_meta(get_the_ID(), 'tag', true))) :
+            <?php if (!empty(get_post_meta(get_the_ID(), 'tag', true))) : ?>
+                <ul>
+                    <?php                         
                         $tag = get_post_meta(get_the_ID(), 'tag', true);
+                        $order = get_post_meta(get_the_ID(), 'order', true);
 
                         $queryArgs = [
                             'post_type' => 'post',
                             'posts_per_page' => -1,
                             'tag' => $tag,
-                            'order' => 'ASC'
+                            'order' => (!empty($order) ? $order : 'ASC')
                         ];
                 
                         $query = new WP_Query( $queryArgs );
@@ -28,8 +29,8 @@
                                 get_template_part('elements/post_item_simple');
                             endwhile;
                         endif;
-                ?>
-            </ul>
+                    ?>
+                </ul>
             <?php endif; ?>
         </div>
     </div>

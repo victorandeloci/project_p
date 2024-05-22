@@ -26,12 +26,13 @@
             <?php 
                 if (!empty(get_post_meta(get_the_ID(), 'tag', true))) {
                     $tag = get_post_meta(get_the_ID(), 'tag', true);
+                    $order = get_post_meta(get_the_ID(), 'order', true);
 
                     $queryArgs = [
                         'post_type' => 'post',
                         'posts_per_page' => -1,
                         'tag' => $tag,
-                        'order' => 'ASC'
+                        'order' => (!empty($order) ? $order : 'ASC')
                     ];
             
                     $query = new WP_Query( $queryArgs );
