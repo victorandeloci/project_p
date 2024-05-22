@@ -9,7 +9,7 @@
         <div class="row post-title">
             <div class="column">
                 <section class="banner-container">
-                    <div class="cover" style="background-image: url(<?= get_post_meta($banner->ID, 'cover_small', true) ?>);"></div>
+                    <div class="cover" style="background-image: url(<?= get_the_post_thumbnail_url() ?>);"></div>
                 </section>
             </div>
             <div class="column">
@@ -26,12 +26,13 @@
             <?php 
                 if (!empty(get_post_meta(get_the_ID(), 'tag', true))) {
                     $tag = get_post_meta(get_the_ID(), 'tag', true);
+                    $order = get_post_meta(get_the_ID(), 'order', true);
 
                     $queryArgs = [
                         'post_type' => 'post',
                         'posts_per_page' => -1,
                         'tag' => $tag,
-                        'order' => 'ASC'
+                        'order' => (!empty($order) ? $order : 'ASC')
                     ];
             
                     $query = new WP_Query( $queryArgs );
