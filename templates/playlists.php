@@ -23,12 +23,18 @@
             
                 $query = new WP_Query($args);
             
-                if ($query->have_posts()) :
-                    while ($query->have_posts()) :
+                if ($query->have_posts()) {
+                    $i = 0;
+                    while ($query->have_posts()) {                        
                         $query->the_post();
-                        get_template_part('elements/playlist_item');
-                    endwhile;
-                endif;
+
+                        get_template_part('elements/playlist_item', null, [
+                            'first' => ($i == 0)
+                        ]);
+
+                        $i++;
+                    }
+                }
             ?>
         </div>
     </div>    
