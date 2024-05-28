@@ -2,7 +2,7 @@
   Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
-  Version: 1.3.0
+  Version: 1.4.0
 */
 
 @import '../plugins/css/normalize';
@@ -359,7 +359,8 @@ html {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    font-family: Dosis;
+    font-family: Dosis; 
+    cursor: url(assets/cursors/Normal_Select.cur), auto; 
 
     .btn {
       display: inline-block;
@@ -367,7 +368,7 @@ html {
       border: solid 2px #fff;
       text-transform: uppercase;
       color: #fff;
-      cursor: pointer;
+      cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer;
       text-decoration: none;
 
       &.yellow {
@@ -585,8 +586,25 @@ html {
       z-index: 1;
     }
 
+    a {
+      cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer;
+    }
+
     p, li, h1, h2, h3, h4, h5, h6 {
       animation: textShadow 1.6s infinite;
+      cursor: url(assets/cursors/Text_Select.cur), text;
+
+      &::selection {
+        color: #fff;
+        background: var(--pink);
+      }
+    }
+
+    strong, b, i, u, span, em {
+      &::selection {
+        color: #fff;
+        background: var(--pink);
+      }
     }
 
     header {
@@ -882,9 +900,14 @@ html {
 
         .plyr {
           margin-bottom: 1rem;
+          cursor: url(assets/cursors/Normal_Select.cur), auto;
 
           .plyr__controls {
             background-color: #1e1e1e;
+
+            .plyr__controls__item {
+              cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer;
+            }
           }
         }
 
@@ -971,6 +994,12 @@ html {
 
               .post-content {
                 animation: textShadow 1.6s infinite;
+                cursor: url(assets/cursors/Text_Select.cur), text;
+
+                &::selection {
+                  color: #fff;
+                  background: var(--pink);
+                }
               }
             }
           }
@@ -1000,6 +1029,13 @@ html {
 
         .playlist-item {
           margin-bottom: 3rem;
+
+          &:nth-child(1) {
+            background-color: rgba(0, 0, 0, 0.75);
+            padding: 1rem;
+            border-radius: .5rem;
+            border: solid 1px rgba(255, 255, 255, 0.3);
+          }
 
           .row {
             gap: 3%;
