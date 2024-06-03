@@ -9,7 +9,7 @@
         <div class="row post-title">
             <div class="column">
                 <section class="banner-container">
-                    <div class="cover" style="background-image: url(<?= get_the_post_thumbnail_url() ?>);"></div>
+                    <div class="cover" style="background-image: url(<?= (empty(get_next_post())) ? (get_template_directory_uri() . '/assets/img/capybara/capy_' . rand(1, 20) . '-min.gif') : get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>);"></div>
                 </section>
             </div>
             <div class="column">
