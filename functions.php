@@ -1,6 +1,6 @@
 <?php
 
-define('PP_VERSION', '1.4.0');
+define('PP_VERSION', '1.4.1');
 
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'custom-logo' );

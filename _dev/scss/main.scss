@@ -2,7 +2,7 @@
   Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
-  Version: 1.4.0
+  Version: 1.4.1
 */
 
 @import '../plugins/css/normalize';
@@ -587,7 +587,11 @@ html {
     }
 
     a {
-      cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer;
+      cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer !important;
+
+      p, li, h1, h2, h3, h4, h5, h6 {
+        cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer !important;
+      }
     }
 
     p, li, h1, h2, h3, h4, h5, h6 {

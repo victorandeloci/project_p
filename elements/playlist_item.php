@@ -6,7 +6,7 @@
             <a 
                 href="<?= $playlistLink ?>" 
                 class="thumb" 
-                style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>);"
+                style="background-image: url(<?= ($args['first']) ? (get_template_directory_uri() . '/assets/img/capybara/capy_' . rand(1, 22) . '-min.gif') : get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>);"
                 title="<?= get_the_title() ?>"
             >
             </a>
