@@ -15,18 +15,21 @@
 
         $query = new WP_Query( $queryArgs );
 
-        if ($query->have_posts()) :
-            $i = 0;
-            while ($query->have_posts()) :
+        if ($query->have_posts()) {
+            // save temp non podcast post
+            if (!in_category('podcast', $query->posts[0]->ID)) {
+                $tempPost = $query->posts[0];
+                $query->posts[0] = $query->posts[1];
+                $query->posts[1] = $tempPost;
+            }
 
-                $query->the_post();
+            foreach ($query->posts as $i => $post) {
                 get_template_part('elements/post_item', null, [
+                    'post' => $post,
                     'is_first' => ($i == 0)
                 ]);
-
-                $i++;
-            endwhile;
-        endif;
+            }
+        }
     ?>
 
     <div id="pagination">
