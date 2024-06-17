@@ -2405,7 +2405,11 @@ html body main#single .row .column:nth-child(2) .details {
 }
 
 html body main#single .row .column:nth-child(2) p {
-  margin: 0;
+  margin: 1rem 0 0 0;
+}
+
+html body main#single .content .post-item .row .column:nth-child(2) .details {
+  margin-bottom: 1rem;
 }
 
 html body main#category .banner-container .links a:hover svg, html body main#search .banner-container .links a:hover svg, html body main#tag .banner-container .links a:hover svg, html body main#page .banner-container .links a:hover svg {
@@ -2722,7 +2726,6 @@ html body main .lists .playlist-item .row .column .thumb {
   height: 15rem;
   background-size: cover;
   background-position: center;
-  filter: grayscale(25%);
 }
 
 html body main .lists .playlist-item .row .column .info a {

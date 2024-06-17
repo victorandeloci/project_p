@@ -45,6 +45,8 @@ async function sendByAction(method, action, formData = null, params = null) {
 }
 
 docReady(function () {
+  console.log("Machines aren't capable of evil. Humans make them that way. - Lucca");
+
   // category selector
   let categorySelector = document.getElementById('category_selector');
   if (categorySelector) {
@@ -60,7 +62,7 @@ docReady(function () {
   if (playerElements) {
     playerElements.forEach((audioElement) => {
       let player = new Plyr(audioElement, {
-        controls: ['play', 'progress', 'current-time', 'mute', 'settings']
+        controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'settings']
       });
     });
   }

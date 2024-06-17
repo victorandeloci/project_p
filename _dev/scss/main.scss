@@ -738,7 +738,21 @@ html {
               }
 
               p {
-                margin: 0;
+                margin: 1rem 0 0 0;
+              }
+            }
+          }
+        }
+
+        .content {
+          .post-item {
+            .row {
+              .column {
+                &:nth-child(2) {
+                  .details {
+                    margin-bottom: 1rem;
+                  }
+                }
               }
             }
           }
@@ -1079,7 +1093,6 @@ html {
                 height: 15rem;
                 background-size: cover;
                 background-position: center;
-                filter: grayscale(25%);
               }
 
               .info {
