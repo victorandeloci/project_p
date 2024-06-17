@@ -1772,6 +1772,7 @@ a.plyr__control:before {
 :root {
   --blue: #68d4ff;
   --pink: #ea36af;
+  --orange: #f06b4a;
 }
 
 @keyframes textflicker {
@@ -2266,6 +2267,20 @@ html body .overlay {
   z-index: 1;
 }
 
+html body .rating-container {
+  margin-top: 1rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  user-select: none;
+}
+
+html body .rating-container.numeric-rating {
+  filter: saturate(0.5);
+}
+
 html body a {
   cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer !important;
 }
@@ -2325,11 +2340,13 @@ html body header .search-form {
 html body header .search-form input {
   border: none;
   margin-bottom: 0;
+  cursor: url(assets/cursors/Text_Select.cur), text;
 }
 
 html body header .search-form button {
   background-color: transparent;
   border: none;
+  cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer !important;
 }
 
 html body header .search-form button svg {
@@ -2384,7 +2401,7 @@ html body main#single .row .column:nth-child(2) h1 {
 
 html body main#single .row .column:nth-child(2) .details {
   margin-top: .5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 html body main#single .row .column:nth-child(2) p {
@@ -2649,6 +2666,10 @@ html body main .content .post-item .row .column .post-content {
 html body main .content .post-item .row .column .post-content::selection {
   color: #fff;
   background: var(--pink);
+}
+
+html body main .content .post-item .row .column .tags-container {
+  margin-top: 1rem;
 }
 
 html body main .content #pagination {

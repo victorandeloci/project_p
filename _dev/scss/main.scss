@@ -30,6 +30,7 @@
 :root {
   --blue: #68d4ff;
   --pink: #ea36af;
+  --orange: #f06b4a;
 }
 
 @keyframes textflicker {
@@ -586,6 +587,20 @@ html {
       z-index: 1;
     }
 
+    .rating-container {
+      margin-top: 1rem;
+      padding: .5rem 1rem;
+      border-radius: .5rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: max-content;
+      border: solid 1px rgba(255, 255, 255, 0.5);
+      user-select: none;
+
+      &.numeric-rating {
+        filter: saturate(0.5);
+      }
+    }
+
     a {
       cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer !important;
 
@@ -647,11 +662,13 @@ html {
         input {
           border: none;
           margin-bottom: 0;
+          cursor: url(assets/cursors/Text_Select.cur), text;
         }
 
         button {
           background-color: transparent;
           border: none;
+          cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer !important;
 
           svg {
             width: 1rem;
@@ -717,7 +734,7 @@ html {
 
               .details {
                 margin-top: .5rem;
-                margin-bottom: 1rem;
+                margin-bottom: 0;
               }
 
               p {
@@ -1004,6 +1021,10 @@ html {
                   color: #fff;
                   background: var(--pink);
                 }
+              }
+
+              .tags-container {
+                margin-top: 1rem;
               }
             }
           }

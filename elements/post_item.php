@@ -30,6 +30,13 @@
                     <?= get_the_excerpt($post->ID) ?>
                 <?php endif; ?>                
             </div>
+            <?php 
+                if (!empty($args['show_rating']) && $args['show_rating'] == true) {
+                    get_template_part('elements/podcast_rating', null, [
+                        'post_id' => $post->ID
+                    ]);
+                }
+            ?>
             <?php get_template_part('elements/tags_container', null, [
                 'show_least' => true
             ]); ?>

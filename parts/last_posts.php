@@ -26,7 +26,8 @@
             foreach ($query->posts as $i => $post) {
                 get_template_part('elements/post_item', null, [
                     'post' => $post,
-                    'is_first' => ($i == 0)
+                    'is_first' => ($i == 0),
+                    'show_rating' => true
                 ]);
             }
         }
