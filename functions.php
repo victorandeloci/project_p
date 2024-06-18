@@ -1,6 +1,6 @@
 <?php
 
-define('PP_VERSION', '1.5.0');
+define('PP_VERSION', '1.5.1');
 
 // movie / game ratings
 define('PP_RATINGS', [

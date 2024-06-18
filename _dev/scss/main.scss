@@ -2,7 +2,7 @@
   Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
-  Version: 1.5.0
+  Version: 1.5.1
 */
 
 @import '../plugins/css/normalize';
@@ -595,9 +595,13 @@ html {
       width: max-content;
       border: solid 1px rgba(255, 255, 255, 0.5);
       user-select: none;
-
+      
       &.numeric-rating {
         filter: saturate(0.5);
+      }
+
+      span {
+        cursor: url(assets/cursors/Normal_Select.cur), auto !important; 
       }
     }
 

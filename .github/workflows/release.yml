@@ -15,7 +15,7 @@ jobs:
     env:
       PACKAGE_LABEL: Project P.
       PACKAGE_NAME: project_p
-      RELEASE_TAG: 1.5.0
+      RELEASE_TAG: 1.5.1
     steps:
       - uses: actions/checkout@v2
 
