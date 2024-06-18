@@ -2,7 +2,7 @@
   Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
-  Version: 1.4.2
+  Version: 1.5.1
 */
 
 @import '../plugins/css/normalize';
@@ -30,6 +30,7 @@
 :root {
   --blue: #68d4ff;
   --pink: #ea36af;
+  --orange: #f06b4a;
 }
 
 @keyframes textflicker {
@@ -586,6 +587,24 @@ html {
       z-index: 1;
     }
 
+    .rating-container {
+      margin-top: 1rem;
+      padding: .5rem 1rem;
+      border-radius: .5rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: max-content;
+      border: solid 1px rgba(255, 255, 255, 0.5);
+      user-select: none;
+      
+      &.numeric-rating {
+        filter: saturate(0.5);
+      }
+
+      span {
+        cursor: url(assets/cursors/Normal_Select.cur), auto !important; 
+      }
+    }
+
     a {
       cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer !important;
 
@@ -647,11 +666,13 @@ html {
         input {
           border: none;
           margin-bottom: 0;
+          cursor: url(assets/cursors/Text_Select.cur), text;
         }
 
         button {
           background-color: transparent;
           border: none;
+          cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer !important;
 
           svg {
             width: 1rem;
@@ -717,11 +738,25 @@ html {
 
               .details {
                 margin-top: .5rem;
-                margin-bottom: 1rem;
+                margin-bottom: 0;
               }
 
               p {
-                margin: 0;
+                margin: 1rem 0 0 0;
+              }
+            }
+          }
+        }
+
+        .content {
+          .post-item {
+            .row {
+              .column {
+                &:nth-child(2) {
+                  .details {
+                    margin-bottom: 1rem;
+                  }
+                }
               }
             }
           }
@@ -1005,6 +1040,10 @@ html {
                   background: var(--pink);
                 }
               }
+
+              .tags-container {
+                margin-top: 1rem;
+              }
             }
           }
         }
@@ -1058,7 +1097,6 @@ html {
                 height: 15rem;
                 background-size: cover;
                 background-position: center;
-                filter: grayscale(25%);
               }
 
               .info {

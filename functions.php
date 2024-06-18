@@ -1,6 +1,15 @@
 <?php
 
-define('PP_VERSION', '1.4.2');
+define('PP_VERSION', '1.5.1');
+
+// movie / game ratings
+define('PP_RATINGS', [
+  'pele' => '💩&nbsp;&nbsp;&nbsp;Era melhor ter ido ver o Pelé...',
+  'tela_quente' => '📺&nbsp;&nbsp;&nbsp;Espera passar na Tela Quente...',
+  'streaming' => '💻&nbsp;&nbsp;&nbsp;Vale o streaming',
+  'ingresso' => '🎟️&nbsp;&nbsp;&nbsp;Vale o ingresso!',
+  '3d' => '🍿&nbsp;&nbsp;&nbsp;Tão bom que vale até o 3D!!!'
+]);
 
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'custom-logo' );
@@ -85,3 +94,18 @@ function pp_contact() {
 }
 add_action('wp_ajax_pp_contact', 'pp_contact');
 add_action('wp_ajax_nopriv_pp_contact', 'pp_contact');
+
+function pp_getRatingLabel($rating) {
+  if (is_numeric($rating)) {
+    $starsLabel = '';
+    $star = ($rating >= 4) ? (($rating >= 6) ? (($rating >= 8.5) ? '⭐' : '★') : '☆') : '👾';
+
+    for ($i=0; $i < intval($rating); $i++) { 
+      $starsLabel .= $star;
+    }
+
+    return $starsLabel;
+  } else {
+    return PP_RATINGS[$rating];
+  }
+}

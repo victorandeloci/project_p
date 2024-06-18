@@ -15,7 +15,11 @@
                 <?php get_template_part('elements/post_details', null, [
                     'show_author' => true
                 ]); ?>
-                <p><?= get_the_excerpt() ?></p>
+                <?php
+                    get_template_part('elements/podcast_rating', null, [
+                        'post_id' => get_the_ID()
+                    ]);
+                ?>
             </div>
         </div>
         <?php get_template_part('elements/nav'); ?>
