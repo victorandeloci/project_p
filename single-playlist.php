@@ -42,7 +42,8 @@
                             $query->the_post();
                             get_template_part('elements/post_item', null, [
                                 'is_first' => false,
-                                'show_player' => true
+                                'show_player' => true,
+                                'show_rating' => true
                             ]);
                         }
                     }
