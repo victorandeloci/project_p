@@ -7,6 +7,7 @@
 
 @import '../plugins/css/normalize';
 @import '../plugins/css/plyr';
+@import '../plugins/css/aesthetic';
 
 @font-face {
   font-family: AksiMosi;
@@ -371,6 +372,13 @@ html {
       color: #fff;
       cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer;
       text-decoration: none;
+      
+      svg {
+        fill: #fff;
+        width: 1rem;
+        height: 1rem;
+        margin-right: .5rem;
+      }
 
       &.yellow {
         color: yellow;
@@ -385,9 +393,17 @@ html {
         color: var(--blue);
         border-color: var(--blue);
 
+        svg {
+          fill: var(--blue);
+        }
+
         &:hover {
           background-color: var(--blue);
           color: #fff;
+
+          svg {
+            fill: #fff;
+          }
         }
       }
 
@@ -1121,6 +1137,12 @@ html {
                 }
               }
 
+              .playlist-play-btn {
+                width: max-content;
+                display: flex;
+                align-items: center;
+              }
+
               ul {
                 padding-left: 0;
 
@@ -1199,6 +1221,52 @@ html {
                 &:hover {
                   text-decoration: underline;
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #playlistPlayerModal {
+      .excerpt-container {
+        color: black;
+      }
+
+      #playlistPlayer {
+        margin-top: 1rem;
+
+        .row {
+          justify-content: space-between;
+
+          .column {
+            width: 49%;
+
+            &#playlistPlayerTimer {
+              display: grid;
+              place-items: center;
+              padding: 1rem 0;
+              background-color: #000;
+              color: var(--pink);
+              font-size: 150%;
+            }
+
+            &.controls {
+              display: flex;
+              flex-wrap: wrap;
+
+              .aesthetic-windows-95-button {
+                width: 20%;
+                height: max-content;
+
+                &.large {
+                  width: 60%;
+                }
+
+                svg {
+                  width: 1rem;
+                  height: 1rem;
+                }                
               }
             }
           }

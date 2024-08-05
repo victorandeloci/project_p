@@ -107,4 +107,26 @@ docReady(function () {
         initVisibleBackgrounds();
     }, false);
   }
+
+  // playlist player
+  let playlistBtns = document.querySelectorAll('.playlist-play-btn');
+  if (playlistBtns != null && playlistBtns.length > 0) {
+    playlistBtns.forEach((playlistBtn) => {
+      playlistBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        let slug = '';
+        if (e.target.tagName == 'path') {          
+          slug = e.target.parentElement.parentElement.getAttribute('data-slug');
+        } else if (e.target.tagName == 'svg') {
+          slug = e.target.parentElement.getAttribute('data-slug');
+        } else {
+          slug = e.target.getAttribute('data-slug');
+        }
+
+        let targetUrl = siteUrl + '/playlist/' + slug + '?mode=player';
+        window.open(targetUrl, 'playlistPlayer', 'width=400,height=160');
+      });
+    });
+  }
 });
