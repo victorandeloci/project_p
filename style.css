@@ -4546,7 +4546,7 @@ html body #playlistPlayerModal #playlistPlayer .row .column {
   width: 49%;
 }
 
-html body #playlistPlayerModal #playlistPlayer .row .column#playlistPlayerTimer {
+html body #playlistPlayerModal #playlistPlayer .row .column#playlistPlayerPosition {
   display: grid;
   place-items: center;
   padding: 1rem 0;
@@ -4569,7 +4569,11 @@ html body #playlistPlayerModal #playlistPlayer .row .column.controls .aesthetic-
   width: 60%;
 }
 
-html body #playlistPlayerModal #playlistPlayer .row .column.controls .aesthetic-windows-95-button svg {
+html body #playlistPlayerModal #playlistPlayer .row .column.controls .aesthetic-windows-95-button button:disabled {
+  opacity: 0.5;
+}
+
+html body #playlistPlayerModal #playlistPlayer .row .column.controls .aesthetic-windows-95-button button svg {
   width: 1rem;
   height: 1rem;
 }

@@ -1242,7 +1242,7 @@ html {
           .column {
             width: 49%;
 
-            &#playlistPlayerTimer {
+            &#playlistPlayerPosition {
               display: grid;
               place-items: center;
               padding: 1rem 0;
@@ -1263,10 +1263,16 @@ html {
                   width: 60%;
                 }
 
-                svg {
-                  width: 1rem;
-                  height: 1rem;
-                }                
+                button {
+                  &:disabled {
+                    opacity: 0.5;
+                  }
+
+                  svg {
+                    width: 1rem;
+                    height: 1rem;
+                  } 
+                }                               
               }
             }
           }

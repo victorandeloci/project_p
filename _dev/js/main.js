@@ -44,6 +44,10 @@ async function sendByAction(method, action, formData = null, params = null) {
   return response;
 }
 
+function formatSeconds(s) {
+  return (s - (s %= 60)) / 60 + (9 < s ? ':' : ':0') + s;
+}
+
 docReady(function () {
   console.log("Machines aren't capable of evil. Humans make them that way. - Lucca");
 
@@ -61,9 +65,11 @@ docReady(function () {
   let playerElements = document.querySelectorAll('audio');
   if (playerElements) {
     playerElements.forEach((audioElement) => {
-      let player = new Plyr(audioElement, {
-        controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'settings']
-      });
+      if (!audioElement.classList.contains('playlist-audio')) {
+        let player = new Plyr(audioElement, {
+          controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'settings']
+        });
+      }
     });
   }
 
@@ -125,8 +131,52 @@ docReady(function () {
         }
 
         let targetUrl = siteUrl + '/playlist/' + slug + '?mode=player';
-        window.open(targetUrl, 'playlistPlayer', 'width=400,height=160');
+        window.open(targetUrl, 'playlistPlayer', 'width=480,height=240');
       });
+    });
+  }
+
+  // playlist player controls
+  let playlistPlayerMedia = document.getElementById('playlistAudio');
+  if (playlistPlayerMedia) {
+    let playBtn = document.getElementById('ppPlay');
+    let pauseBtn = document.getElementById('ppPause');
+    let stopBtn = document.getElementById('ppStop');
+
+    // startup
+    playlistPlayerMedia.addEventListener('canplay', function (e) {
+      let playlistPlayerPosition = document.getElementById('playlistPlayerPosition');
+
+      // time position
+      playlistPlayerMedia.addEventListener('timeupdate', function (e) {
+        let seconds = Math.floor(playlistPlayerMedia.currentTime);
+        playlistPlayerPosition.innerHTML = formatSeconds(seconds);
+      });
+    });
+
+    // play btn    
+    playBtn.addEventListener('click', function () {
+      playlistPlayerMedia.play();
+      playBtn.setAttribute('disabled', true);
+      pauseBtn.removeAttribute('disabled');
+      stopBtn.removeAttribute('disabled');
+    });
+
+    // pause btn    
+    pauseBtn.addEventListener('click', function () {
+      playlistPlayerMedia.pause();
+      pauseBtn.setAttribute('disabled', true);
+      playBtn.removeAttribute('disabled');
+    });
+
+    // stop btn    
+    stopBtn.addEventListener('click', function () {
+      playlistPlayerMedia.pause();
+      playlistPlayerMedia.load();
+
+      pauseBtn.setAttribute('disabled', true);
+      stopBtn.setAttribute('disabled', true);
+      playBtn.removeAttribute('disabled');
     });
   }
 });
