@@ -2,7 +2,7 @@
   Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
-  Version: 1.5.2
+  Version: 1.6.0
 */
 
 @import '../plugins/css/normalize';
@@ -410,6 +410,10 @@ html {
       &:hover {
         background-color: #fff;
         color: #000;
+
+        svg {
+          fill: #000;
+        }
       }
     }
 
@@ -1137,10 +1141,16 @@ html {
                 }
               }
 
-              .playlist-play-btn {
-                width: max-content;
+              .playlist-items-btn-container {
                 display: flex;
                 align-items: center;
+                gap: 1rem;
+
+                .btn {
+                  width: max-content;
+                  display: flex;
+                  align-items: center;
+                }
               }
 
               ul {
@@ -1229,6 +1239,8 @@ html {
     }
 
     #playlistPlayerModal {
+      height: 100%;
+
       .excerpt-container {
         color: black;
       }
@@ -1296,6 +1308,10 @@ html {
             background-color: transparent;
             border: none;
           }
+        }
+
+        .total-details {
+          margin-top: 1rem;
         }
       }
     }

@@ -131,7 +131,7 @@ docReady(function () {
         }
 
         let targetUrl = siteUrl + '/playlist/' + slug + '?mode=player';
-        window.open(targetUrl, 'playlistPlayer', 'width=480,height=240');
+        window.open(targetUrl, 'playlistPlayer', 'width=480, height=300, toolbar=no, menubar=no, resizable=no');
       });
     });
   }
@@ -146,10 +146,13 @@ docReady(function () {
     let forwardBtn = document.getElementById('ppForward');
     let previousBtn = document.getElementById('ppPrevious');
     let nextBtn = document.getElementById('ppNext');
+    let trackDurationLabel = document.getElementById('ppTrackDuration');
+    let playlistPlayerPosition = document.getElementById('playlistPlayerPosition');
 
     // startup
     playlistPlayerMedia.addEventListener('canplay', function (e) {
-      let playlistPlayerPosition = document.getElementById('playlistPlayerPosition');
+      // track details
+      trackDurationLabel.innerHTML = formatSeconds(Math.floor(playlistPlayerMedia.duration));
 
       // enables play
       playBtn.removeAttribute('disabled');
@@ -158,12 +161,15 @@ docReady(function () {
       playlistPlayerMedia.addEventListener('timeupdate', function (e) {
         let seconds = Math.floor(playlistPlayerMedia.currentTime);
         playlistPlayerPosition.innerHTML = formatSeconds(seconds);
-      });      
+      });
     });
 
     // track selector
     let selector = document.querySelector('#ppTrackSelector select');
     selector.addEventListener('change', function () {
+      // update track duration label
+      trackDurationLabel.innerHTML = 'Carregando...';
+
       let mp3Url = selector.value;
       if (mp3Url != null && mp3Url != '') {
         // disable all buttons
