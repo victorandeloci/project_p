@@ -1278,6 +1278,26 @@ html {
           }
         }
       }
+
+      .playlist-player-details {
+        margin-top: 1rem;
+
+        input {
+          width: 100%;
+        }
+
+        #ppTrackSelector {
+          display: flex;
+          align-items: center;
+
+          .aesthetic-windows-95-select-checkmark {
+            position: unset;
+            background: transparent;
+            background-color: transparent;
+            border: none;
+          }
+        }
+      }
     }
   }
 }

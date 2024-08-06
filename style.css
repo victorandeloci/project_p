@@ -4578,6 +4578,26 @@ html body #playlistPlayerModal #playlistPlayer .row .column.controls .aesthetic-
   height: 1rem;
 }
 
+html body #playlistPlayerModal .playlist-player-details {
+  margin-top: 1rem;
+}
+
+html body #playlistPlayerModal .playlist-player-details input {
+  width: 100%;
+}
+
+html body #playlistPlayerModal .playlist-player-details #ppTrackSelector {
+  display: flex;
+  align-items: center;
+}
+
+html body #playlistPlayerModal .playlist-player-details #ppTrackSelector .aesthetic-windows-95-select-checkmark {
+  position: unset;
+  background: transparent;
+  background-color: transparent;
+  border: none;
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
   html body .container {
     width: 70%;

@@ -142,16 +142,41 @@ docReady(function () {
     let playBtn = document.getElementById('ppPlay');
     let pauseBtn = document.getElementById('ppPause');
     let stopBtn = document.getElementById('ppStop');
+    let backwardBtn = document.getElementById('ppBackward');
+    let forwardBtn = document.getElementById('ppForward');
+    let previousBtn = document.getElementById('ppPrevious');
+    let nextBtn = document.getElementById('ppNext');
 
     // startup
     playlistPlayerMedia.addEventListener('canplay', function (e) {
       let playlistPlayerPosition = document.getElementById('playlistPlayerPosition');
 
+      // enables play
+      playBtn.removeAttribute('disabled');
+
       // time position
       playlistPlayerMedia.addEventListener('timeupdate', function (e) {
         let seconds = Math.floor(playlistPlayerMedia.currentTime);
         playlistPlayerPosition.innerHTML = formatSeconds(seconds);
-      });
+      });      
+    });
+
+    // track selector
+    let selector = document.querySelector('#ppTrackSelector select');
+    selector.addEventListener('change', function () {
+      let mp3Url = selector.value;
+      if (mp3Url != null && mp3Url != '') {
+        // disable all buttons
+        playBtn.setAttribute('disabled', true);
+        pauseBtn.setAttribute('disabled', true);
+        stopBtn.setAttribute('disabled', true);
+        backwardBtn.setAttribute('disabled', true);
+        forwardBtn.setAttribute('disabled', true);
+        previousBtn.setAttribute('disabled', true);
+        nextBtn.setAttribute('disabled', true);
+
+        playlistPlayerMedia.setAttribute('src', mp3Url);
+      }
     });
 
     // play btn    
@@ -160,6 +185,10 @@ docReady(function () {
       playBtn.setAttribute('disabled', true);
       pauseBtn.removeAttribute('disabled');
       stopBtn.removeAttribute('disabled');
+
+      // time controls
+      backwardBtn.removeAttribute('disabled');
+      forwardBtn.removeAttribute('disabled');
     });
 
     // pause btn    
@@ -177,6 +206,18 @@ docReady(function () {
       pauseBtn.setAttribute('disabled', true);
       stopBtn.setAttribute('disabled', true);
       playBtn.removeAttribute('disabled');
+      backwardBtn.setAttribute('disabled', true);
+      forwardBtn.setAttribute('disabled', true);
+    });
+
+    // backward btn    
+    backwardBtn.addEventListener('click', function () {
+      playlistPlayerMedia.currentTime = (playlistPlayerMedia.currentTime - 15);
+    });
+
+    // backward btn    
+    forwardBtn.addEventListener('click', function () {
+      playlistPlayerMedia.currentTime = (playlistPlayerMedia.currentTime + 15);
     });
   }
 });
