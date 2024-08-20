@@ -2,11 +2,12 @@
   Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
-  Version: 1.5.2
+  Version: 1.6.2
 */
 
 @import '../plugins/css/normalize';
 @import '../plugins/css/plyr';
+@import '../plugins/css/aesthetic';
 
 @font-face {
   font-family: AksiMosi;
@@ -371,6 +372,13 @@ html {
       color: #fff;
       cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer;
       text-decoration: none;
+      
+      svg {
+        fill: #fff;
+        width: 1rem;
+        height: 1rem;
+        margin-right: .5rem;
+      }
 
       &.yellow {
         color: yellow;
@@ -385,15 +393,27 @@ html {
         color: var(--blue);
         border-color: var(--blue);
 
+        svg {
+          fill: var(--blue);
+        }
+
         &:hover {
           background-color: var(--blue);
           color: #fff;
+
+          svg {
+            fill: #fff;
+          }
         }
       }
 
       &:hover {
         background-color: #fff;
         color: #000;
+
+        svg {
+          fill: #000;
+        }
       }
     }
 
@@ -946,6 +966,7 @@ html {
 
             .plyr__controls__item {
               cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer;
+              color: #bbb !important;
             }
           }
         }
@@ -1121,6 +1142,18 @@ html {
                 }
               }
 
+              .playlist-items-btn-container {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .btn {
+                  width: max-content;
+                  display: flex;
+                  align-items: center;
+                }
+              }
+
               ul {
                 padding-left: 0;
 
@@ -1202,6 +1235,84 @@ html {
               }
             }
           }
+        }
+      }
+    }
+
+    #playlistPlayerModal {
+      height: 100%;
+
+      .excerpt-container {
+        color: black;
+      }
+
+      #playlistPlayer {
+        margin-top: 1rem;
+
+        .row {
+          justify-content: space-between;
+
+          .column {
+            width: 49%;
+
+            &#playlistPlayerPosition {
+              display: grid;
+              place-items: center;
+              padding: 1rem 0;
+              background-color: #000;
+              color: var(--pink);
+              font-size: 150%;
+            }
+
+            &.controls {
+              display: flex;
+              flex-wrap: wrap;
+
+              .aesthetic-windows-95-button {
+                width: 20%;
+                height: max-content;
+
+                &.large {
+                  width: 60%;
+                }
+
+                button {
+                  &:disabled {
+                    opacity: 0.5;
+                  }
+
+                  svg {
+                    width: 1rem;
+                    height: 1rem;
+                  } 
+                }                               
+              }
+            }
+          }
+        }
+      }
+
+      .playlist-player-details {
+        margin-top: 1rem;
+
+        input {
+          width: 100%;
+        }
+
+        #ppTrackSelector {
+          display: flex;
+          align-items: center;
+
+          .aesthetic-windows-95-select-checkmark {
+            position: unset;
+            background: transparent;
+            background-color: transparent;
+            border: none;
+          }
+        }
+
+        .total-details {
+          margin-top: 1rem;
         }
       }
     }
