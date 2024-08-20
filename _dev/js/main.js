@@ -67,7 +67,7 @@ docReady(function () {
     playerElements.forEach((audioElement) => {
       if (!audioElement.classList.contains('playlist-audio')) {
         let player = new Plyr(audioElement, {
-          controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'settings']
+          controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'download', 'settings']
         });
       }
     });

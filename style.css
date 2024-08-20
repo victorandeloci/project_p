@@ -3,7 +3,7 @@
   Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
-  Version: 1.6.1
+  Version: 1.6.2
 */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -4282,6 +4282,7 @@ html body main .content .plyr .plyr__controls {
 
 html body main .content .plyr .plyr__controls .plyr__controls__item {
   cursor: url(assets/cursors/Link_Select_Middlefinger.cur), pointer;
+  color: #bbb !important;
 }
 
 html body main .content.last-posts {
