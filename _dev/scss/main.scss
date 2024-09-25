@@ -2,7 +2,7 @@
   Theme Name: Project P.
   Author: Victor Andeloci
   Author URI: https://github.com/victorandeloci
-  Version: 1.6.2
+  Version: 1.6.3
 */
 
 @import '../plugins/css/normalize';
@@ -362,7 +362,42 @@ html {
     background-position: center;
     background-attachment: fixed;
     font-family: Dosis; 
-    cursor: url(assets/cursors/Normal_Select.cur), auto; 
+    cursor: url(assets/cursors/Normal_Select.cur), auto;
+
+    #playlistBox {
+      display: none;
+      position: fixed;
+      top: 5rem;
+      right: 5rem;
+      z-index: 998;
+      background-color: #f1f1f1;
+      border: 1px solid #d3d3d3;
+      text-align: center;
+      width: 480px;
+      height: 300px;
+
+      &.show {
+        display: block;
+      }
+
+      #playlistBoxHeader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 2rem;
+        cursor: grab;
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
 
     .btn {
       display: inline-block;

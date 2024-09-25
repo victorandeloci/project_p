@@ -40,4 +40,9 @@
     </div>    
 </main>
 
+<div id="playlistBox">
+    <div id="playlistBoxHeader"></div>
+    <iframe id="playlistBoxIframe" src="" frameborder="0"></iframe>
+</div>
+
 <?php get_footer(); ?>
