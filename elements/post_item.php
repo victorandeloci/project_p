@@ -29,7 +29,7 @@
                             ]);
                         }
                     ?>
-                    <?=  $post->post_content ?>
+                    <?= get_the_excerpt($post->ID) ?>
                 <?php elseif (!empty($args['show_player']) && $args['show_player'] == true) : ?>
                     <?php get_template_part('elements/podcast_player'); ?>
                     <?= get_the_excerpt($post->ID) ?>
